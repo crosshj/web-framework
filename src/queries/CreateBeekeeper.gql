@@ -1,0 +1,16 @@
+mutation CreateBeekeeper($input: BeekeeperInput) {
+	MobileCreateBeekeeper(input: $input) {
+		id
+		createdTimestamp
+		updatedTimestamp
+		isActive
+		firstName
+		lastName
+		email
+		unitPreference
+		birthYear
+		beekeepingExperience
+		environment
+		language
+	}
+}

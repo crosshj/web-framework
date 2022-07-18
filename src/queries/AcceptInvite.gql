@@ -1,0 +1,6 @@
+mutation AcceptInvite($input: GroupMemberInput) {
+	GroupMember(input: $input) {
+		id
+		name
+	}
+}

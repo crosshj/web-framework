@@ -1,0 +1,26 @@
+query MobileMe {
+	MobileMe {
+		id
+		createdTimestamp
+		updatedTimestamp
+		isActive
+		firstName
+		lastName
+		email
+		unitPreference
+		birthYear
+		beekeepingExperience
+		environment
+		language
+		yards {
+			id
+		}
+		mobileDevices {
+			deviceId
+		}
+		group {
+			id
+			name
+		}
+	}
+}
