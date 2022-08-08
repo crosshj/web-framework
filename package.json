@@ -1,6 +1,6 @@
 {
-    "version": "0.0.1",
-    "name": "@anthroware/web",
+    "version": "0.0.0",
+    "name": "@awoss/web",
     "description": "",
     "scripts": {
         "start": "",
@@ -14,7 +14,7 @@
         "url": "git+https://github.com/Anthroware/web-framework.git"
     },
     "publishConfig": {
-        "@anthroware:registry": "https://npm.pkg.github.com"
+        "access": "public"
     },
     "keywords": [],
     "author": "Anthroware",
