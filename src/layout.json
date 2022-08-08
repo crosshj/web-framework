@@ -1,6 +1,0 @@
-{
-    "routes": {
-        "primary": ["Inbox", "Starred", "Send email", "Drafts"],
-        "secondary": ["All mail", "Trash", "Spam"]
-    }
-}

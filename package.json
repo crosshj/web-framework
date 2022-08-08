@@ -1,53 +1,25 @@
 {
     "private": true,
-    "name": "greenfield-web",
+    "name": "anthroware-web",
+    "version": "0.0.0",
+    "description": "page layout for browser applications",
     "scripts": {
-        "start": "BROWSER=none react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "watch": "vercel dev"
+        "start": "",
+        "build": "",
+        "test": "",
+        "watch": ""
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+    "main": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Anthroware/web-framework.git"
     },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+    "keywords": [],
+    "author": "Anthroware",
+    "bugs": {
+        "url": "https://github.com/Anthroware/web-framework/issues"
     },
-    "dependencies": {
-        "vercel": "24.2.5"
-    },
-    "devDependencies": {
-        "@auth0/nextjs-auth0": "1.7.0",
-        "@emotion/react": "11.8.2",
-        "@emotion/styled": "11.8.1",
-        "@mui/icons-material": "5.5.1",
-        "@mui/material": "5.5.2",
-        "@mui/styled-engine": "5.5.2",
-        "@mui/x-data-grid": "5.7.0",
-        "@mui/x-data-grid-generator": "5.7.0",
-        "@testing-library/react": "12.1.5",
-        "detect-browser-language": "0.0.2",
-        "graphql": "16.3.0",
-        "graphql-request": "4.2.0",
-        "graphql.macro": "1.4.2",
-        "jwt-decode": "3.1.2",
-        "msw": "0.42.0",
-        "node-fetch": "2.6.7",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
-        "react-scripts": "5.0.0"
-    }
+    "homepage": "https://github.com/Anthroware/web-framework#readme",
+    "dependencies": {},
+    "devDependencies": {}
 }

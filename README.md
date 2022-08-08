@@ -1,9 +1,11 @@
 # web-framework
 
-## Getting Started
+## How to use
+
+```javascript
+```
+
+## How to develop
 
 ```bash
-# local development
-npm install
-npm run watch
 ```
