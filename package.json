@@ -1,14 +1,15 @@
 {
-    "version": "0.0.0",
+    "version": "0.0.0-1",
     "name": "@awoss/web",
     "description": "",
     "scripts": {
         "start": "",
-        "build": "",
         "test": "",
-        "watch": ""
+        "watch": "",
+        "prepublishOnly": "npm run build",
+        "build": "rm -rf dist && rollup -c"
     },
-    "main": "src/index.js",
+    "main": "dist/index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Anthroware/web-framework.git"
@@ -23,5 +24,12 @@
     },
     "homepage": "https://github.com/Anthroware/web-framework#readme",
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {
+        "rollup": "^2.26.11",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-filesize": "^9.0.2",
+        "rollup-plugin-gzip": "^2.5.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^7.0.2"
+    }
 }
