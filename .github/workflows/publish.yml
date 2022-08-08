@@ -14,6 +14,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: 'anthroware'
       - run: npm install
-      - run: npm publish
+      - run: npm publish --scope 'anthroware' --registry 'https://npm.pkg.github.com/'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
