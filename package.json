@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "anthroware-web",
     "version": "0.0.1",
-    "description": "page layout for browser applications",
+    "name": "@anthroware/web",
+    "description": "",
     "scripts": {
         "start": "",
         "build": "",
@@ -13,6 +13,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Anthroware/web-framework.git"
+    },
+    "publishConfig": {
+        "@anthroware:registry": "https://npm.pkg.github.com"
     },
     "keywords": [],
     "author": "Anthroware",
