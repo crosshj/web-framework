@@ -9,7 +9,7 @@ export default [
 		input: 'src/index.js',
 		output: [
 			{
-				file: 'dist/index.js',
+				file: 'dist/index.mjs',
 				format: 'module',
 				name: 'awoss_web',
 				sourcemap: true,
