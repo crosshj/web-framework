@@ -9,6 +9,6 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@awoss/web": "0.0.0-3"
+        "@awoss/web": "0.0.0-4"
     }
 }

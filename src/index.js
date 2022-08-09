@@ -1,3 +1,3 @@
-const hello = () => 'hello world\n';
+const hello = () => 'hello world!!!\n';
 
 export default hello;
