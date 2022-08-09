@@ -1,3 +1,4 @@
-import framework from '@awoss/web';
+import framework from '../src/index.mjs';
+// import framework from '@awoss/web';
 
-console.log(framework());
+console.log(framework('Sophia'));

@@ -6,7 +6,7 @@ import commonjs from 'rollup-plugin-commonjs';
 
 export default [
 	{
-		input: 'src/index.js',
+		input: 'src/index.mjs',
 		output: [
 			{
 				file: 'dist/index.mjs',
@@ -16,7 +16,6 @@ export default [
 				plugins: [terser(), gzipPlugin(), filesize()],
 			},
 		],
-
 		plugins: [resolve(), commonjs()],
 	},
 ];
