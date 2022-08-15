@@ -1,5 +1,8 @@
-const framework = ({ config }) => {
-	return `Hello, ${config}!!!\n`;
-};
+const Button = () => {};
 
-export default framework;
+const NewComponent = () => {};
+
+export const components = {
+	Button,
+	NewComponent,
+};

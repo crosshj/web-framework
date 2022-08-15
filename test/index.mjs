@@ -1,4 +1,7 @@
-import framework from '../src/index.mjs';
-// import framework from '@awoss/web';
+import { components } from '@awoss/web';
 
-console.log(framework('Sophia'));
+const { Button, NewComponent } = components;
+
+console.log(components);
+console.log(Button);
+console.log(NewComponent);

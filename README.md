@@ -3,7 +3,11 @@
 ## How to use
 
 ```javascript
-import framework from '@awoss/web';
+import { components } from '@awoss/web';
 
-console.log(framework()); //hello world
+const { Button, NewComponent } = components;
+
+console.log(components);
+console.log(Button);
+console.log(NewComponent);
 ```
