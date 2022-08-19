@@ -36,6 +36,12 @@ export const screen = {
 	// ??
 };
 
+export const componentsList = [];
+
+export const app = framework({
+	components: componentsList,
+});
+
 /* 
 export const layout = {
 	Title, 
