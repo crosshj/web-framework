@@ -43,7 +43,7 @@
         overflow-y="auto"
     >
         <Container
-            path="pages/Overview"
+            path="pages/{{route}}"
             class="flex justifyCenter alignCenter"
         />
     </div>

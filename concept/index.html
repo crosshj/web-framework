@@ -15,6 +15,9 @@
 
 	<script type="module">
 		import Fragments from './modules/fragments.js';
+		import Events from './modules/events.js';
+
+		Events.attach();
 		Fragments.update({ path: 'Site.xml', swap: 'body' });
 	</script>
 </html>
