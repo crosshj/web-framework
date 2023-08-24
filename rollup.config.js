@@ -3,10 +3,11 @@ import filesize from 'rollup-plugin-filesize';
 import gzipPlugin from 'rollup-plugin-gzip';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import typescript from 'rollup-plugin-typescript';
 
 export default [
 	{
-		input: 'src/index.mjs',
+		input: 'src/index.ts',
 		output: [
 			{
 				file: 'dist/index.mjs',
@@ -16,6 +17,7 @@ export default [
 				plugins: [terser(), gzipPlugin(), filesize()],
 			},
 		],
-		plugins: [resolve(), commonjs()],
+		plugins: [typescript(), resolve(), commonjs()],
+		external: ['react'],
 	},
 ];
