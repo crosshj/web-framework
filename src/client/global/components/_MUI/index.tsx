@@ -1,3 +1,4 @@
+import React from 'react';
 import * as _ from 'lodash';
 import * as M from '@mui/material';
 import { StateManager } from '../../../state/state';
@@ -6,6 +7,7 @@ import { getShim } from './shims';
 import * as StandardComponents from './StandardComponents';
 import { fill, getStatefulProps } from './core';
 import { parseProperties, withNamespaced } from '../../utils';
+import { genericAdapter } from '../../adapters/generic';
 
 /*
  * PROPS NAMING
@@ -68,23 +70,20 @@ const ComponentWithTokensAndData = ({
 		type: propsIntact?._src?.type,
 	});
 
-	const { textContent } = allProps;
+	const { textContent }: any = allProps;
 
 	// this prop messes up css FLEX order
-	delete allProps.order;
+	delete (allProps as any).order;
 
 	if (propsIntact.debug) {
 		console.log({
 			_: `_MUI DEBUG - ${Component._name}`,
 			sx,
+			propsIntact,
+			propsFilled,
+			propsShimmed,
+			pathsToListen,
 			allProps,
-			...{
-				propsIntact,
-				propsFilled,
-				propsShimmed,
-				pathsToListen,
-				allProps,
-			},
 		});
 		console.log(_.repeat('\n', 6));
 	}
@@ -98,8 +97,8 @@ const ComponentWithTokensAndData = ({
 	);
 };
 
-const Generic = (name) => (props) => {
-	const Component = StandardComponents[name] || M[name];
+const Generic = (name: any) => (props: any) => {
+	const Component = (StandardComponents as any)[name] || (M as any)[name];
 
 	_.set(Component, '_name', name);
 
@@ -122,4 +121,13 @@ const MUIComponents = {
 	Typography: Generic('Typography'),
 	MUI_Stepper: Generic('Stepper'),
 };
-export default MUIComponents;
+
+const adapters = Object.entries(MUIComponents).reduce(
+	(a, [k, v]) => ({
+		...a,
+		[k]: genericAdapter(v),
+	}),
+	{},
+);
+
+export default adapters;

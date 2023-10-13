@@ -55,11 +55,16 @@ const menuMap = (x: any, i: any) => ({
 });
 
 export const Global = () => {
-	const { user, isLoading } = useUser();
-	const [state, setState] = StateManager.useListener(undefined, undefined, {
-		note: 'global/index.jsx',
-	});
-	const [menus] = StateManager.useListener('menus', undefined, {
+	//const { user, isLoading } = useUser();
+	const { user, isLoading }: any = {};
+	const [state, setState]: any = StateManager.useListener(
+		undefined,
+		undefined,
+		{
+			note: 'global/index.jsx',
+		},
+	);
+	const [menus]: any = StateManager.useListener('menus', undefined, {
 		note: 'global/index.jsx',
 	});
 

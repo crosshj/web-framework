@@ -1,9 +1,12 @@
 import typescript from 'rollup-plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
-import gzipPlugin from 'rollup-plugin-gzip';
-// import resolve from '@rollup/plugin-node-resolve';
-// import commonjs from '@rollup/plugin-commonjs';
+import graphql from '@rollup/plugin-graphql';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import replace from '@rollup/plugin-replace';
+import nodePolyfills from 'rollup-plugin-polyfill-node';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default [
 	{
@@ -16,11 +19,52 @@ export default [
 				name: 'awoss_web',
 				sourcemap: true,
 				strict: false,
-				plugins: [terser(), gzipPlugin(), filesize()],
+				plugins: [filesize()],
 			},
 		],
-		plugins: [typescript()],
-		external: ['react', 'react-dom'],
+		plugins: [
+			peerDepsExternal(),
+			resolve({
+				preferBuiltins: false,
+				exportConditions: ['node'],
+				browser: true,
+				modulesOnly: true,
+			}),
+			commonjs({
+				include: /node_modules/,
+				//include: ['./index.js', 'node_modules/**'],
+				requireReturnsDefault: 'auto',
+			}),
+			typescript(),
+			graphql(),
+			replace({
+				'process.env.NODE_ENV': JSON.stringify('development'),
+				'process.env.REACT_APP_BASE_URL': '""', // src/client/framework/api.js
+				preventAssignment: true,
+			}),
+			// json(),
+
+			nodePolyfills(), //TODO: but why do node core modules wind up in the build anyways?
+		],
+		//external: [],
+		external: [
+			'react',
+			'react-dom',
+			'react-is',
+			'date-fns-tz',
+			'date-fns',
+			'date-fns/_lib/format/longFormatters',
+			'highlight.js',
+			'extend',
+			'style-to-object',
+		],
+		onwarn(warning, warn) {
+			if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+				// ignores 'use client' warnings
+				return;
+			}
+			warn(warning);
+		},
 	},
 	{
 		input: 'src/server/index.ts',

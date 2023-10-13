@@ -1,7 +1,10 @@
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
-import { useSyncExternalStore } from 'react';
-import { clone } from '../global/utils';
+// import { useSyncExternalStore } from 'react';
+import { clone } from '../global/utils/clone';
+
+let useSyncExternalStore;
+//console.log(`React version (state): ${React.version}`);
 
 let state = {};
 let subscriptions = [];
@@ -237,6 +240,10 @@ const _useListener = (path, defaultValue, cfg) => {
 	};
 	const value = {
 		get useValue() {
+			if (typeof useSyncExternalStore === 'undefined') {
+				console.error(`State Manager not bound to React!`);
+				return;
+			}
 			const value = useSyncExternalStore(doSubscribe, getSnapshot);
 			return value;
 		},
@@ -257,7 +264,12 @@ const useListener = (path, defaultValue, cfg) => {
 	return _useListener(path, defaultValue, cfg);
 };
 
+const bindStore = (React) => {
+	useSyncExternalStore = React.useSyncExternalStore;
+};
+
 export const StateManager = {
+	bindStore,
 	init,
 	get,
 	update,

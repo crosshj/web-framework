@@ -16,7 +16,7 @@ import * as Tabs from '../components/Tabs';
 import { Validator } from '../components/Validator';
 import { DataViz } from '../components/DataViz/DataViz';
 
-import M from '../components/_MUI';
+import MUIGeneric from '../components/_MUI';
 
 import { Navigate } from '../components/Flow/Navigate/index.jsx';
 import TalentMobilePage from '../components/TalentMobilePage';
@@ -51,14 +51,6 @@ import {
 } from '.';
 import { dataListViewAdapter } from './dataListView';
 import { genericAdapter } from './generic';
-
-const MUIGeneric = Object.entries(M).reduce(
-	(a, [k, v]) => ({
-		...a,
-		[k]: genericAdapter(v),
-	}),
-	{}
-);
 
 export const adapterMap = {
 	...MUIGeneric,

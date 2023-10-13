@@ -17,8 +17,4 @@ export * from './parseValue.js';
 export * from './setNestedValue.js';
 export * from './stringUtils';
 export * from './getFilledQueryParams';
-
-export const clone =
-	typeof structuredClone === 'undefined'
-		? (x) => JSON.parse(JSON.stringify(x))
-		: (x) => structuredClone(x);
+export * from './clone';

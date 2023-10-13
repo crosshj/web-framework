@@ -1,7 +1,8 @@
-import React from 'react';
-import * as nextAuth from '@auth0/nextjs-auth0';
-const { UserProvider: Auth0UserProvider, useUser: useAuth0User } = nextAuth;
-const { useState, useMemo } = React;
+import React, { useState, useMemo } from 'react';
+import {
+	UserProvider as Auth0UserProvider,
+	useUser as useAuth0User,
+} from '@auth0/nextjs-auth0';
 
 export const UserContext = React.createContext(undefined);
 
