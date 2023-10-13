@@ -13,6 +13,7 @@ export default [
 				file: 'dist/client.js',
 				format: 'cjs',
 				exports: 'named',
+				name: 'awoss_web',
 				sourcemap: true,
 				strict: false,
 				plugins: [terser(), gzipPlugin(), filesize()],
