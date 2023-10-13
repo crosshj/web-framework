@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { adapterMap } from '../../../global/adapters/adapterMap';
 import { genericAdapter } from '../../../global/adapters/generic';
 import { cleanProps } from '../../../global/components/utils';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Typography, Grid, Input } from '@mui/material';
 import { FilePresentRounded, DeleteForever } from '@mui/icons-material';
 import { FileStack, StackIcon } from './style.js';

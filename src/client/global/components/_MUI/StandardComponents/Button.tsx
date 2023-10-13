@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Button as MuiButton } from '@mui/material';
 import { useFlow, useGlobal } from '../../../hooks';
 import { Icon } from '../..';

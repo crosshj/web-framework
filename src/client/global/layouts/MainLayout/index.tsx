@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as S from './styles';
 import { Header } from '../../components';
 import { Sidebar } from '../../components/Sidebar';

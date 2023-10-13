@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Button, ButtonGroup as MuiButtonGroup } from '@mui/material';
 import { useGlobal } from '../../hooks';
 

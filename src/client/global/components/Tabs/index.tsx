@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as M from '@mui/material';
 import { useData } from '../../../global/hooks/useData';
 import { StateManager } from '../../../state/state';

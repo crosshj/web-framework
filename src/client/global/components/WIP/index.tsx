@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Alert, Typography } from '@mui/material';
 import { Button } from '..';
 import * as S from './styles';

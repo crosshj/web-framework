@@ -5,7 +5,7 @@
 // #                                                                      #
 // ########################################################################
 
-import * as React from 'react';
+import React from 'react';
 import * as M from '@mui/material';
 import { Checkbox, Chip, TextField, Typography } from '@mui/material';
 import MUIGeneric from '../_MUI';

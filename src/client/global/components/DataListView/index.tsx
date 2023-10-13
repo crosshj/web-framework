@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button } from '..';

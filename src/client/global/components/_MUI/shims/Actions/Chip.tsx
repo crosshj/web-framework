@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Icon } from '../../../Icon';
 import { getColor } from '../../../../utils';
 import { StateManager } from '../../../../../state/state';

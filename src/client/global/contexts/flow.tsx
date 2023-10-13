@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { createContext, useCallback, useEffect, useState } from 'react';
 import { submitFormData } from '../services';
@@ -45,8 +45,8 @@ export const FlowProvider = ({ children }: any) => {
 		call,
 		params,
 		flatten, // onSuccess,
-		// onError,
-	}: any) => {
+	} // onError,
+	: any) => {
 		const input = [
 			{
 				name,

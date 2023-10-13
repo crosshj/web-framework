@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, IconButton } from '@mui/material';
 import { ChevronLeft, Menu } from '@mui/icons-material';
 import * as S from './styles';

@@ -3,7 +3,7 @@
 // import { useGlobal } from '../../hooks';
 // // import { Validator } from 'global/components/Validator';
 // import { Selector } from 'framework/components/Selector';
-// import * as React from 'react';
+// import React from 'react';
 // import { objectFromIdTree } from 'global/utils';
 
 // jest.mock('global/hooks/useGlobal.js');

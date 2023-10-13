@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as S from './styles';
 import { DataGrid as MuiDataGrid } from '@mui/x-data-grid';
 

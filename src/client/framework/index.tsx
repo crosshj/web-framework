@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Selector } from './components/Selector';
 import { contextParser } from '../global/utils';

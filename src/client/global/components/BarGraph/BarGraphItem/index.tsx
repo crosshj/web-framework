@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { Icon } from '../..';
 import { iconMap } from '../../utils';

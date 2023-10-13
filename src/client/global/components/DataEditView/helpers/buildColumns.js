@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { renderMode } from '../../utils';
 
 // TODO: assess whether dispatch is deprecated or not

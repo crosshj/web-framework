@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as nextAuth from '@auth0/nextjs-auth0';
 const { UserProvider: Auth0UserProvider, useUser: useAuth0User } = nextAuth;
 const { useState, useMemo } = React;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Card, CardContent, Stack, Typography } from '@mui/material';
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';

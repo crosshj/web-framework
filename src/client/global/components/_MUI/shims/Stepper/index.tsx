@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Step, StepLabel } from '@mui/material';
 import * as _ from 'lodash';
 

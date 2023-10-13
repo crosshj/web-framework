@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useApi, useUser } from './hooks';
 //import { useModuleBuilder } from './hooks';
 import { MainLayout } from './layouts/MainLayout';

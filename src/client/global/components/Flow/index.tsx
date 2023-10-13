@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useFlow, useMount } from '../../hooks';
 
 import { Confirm } from './Confirm';

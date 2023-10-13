@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import { Button } from '../components';
 import { Link } from '../../router';

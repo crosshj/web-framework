@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Icon as MuiIcon, SvgIcon } from '@mui/material';
 import { SnakeCase, getColor } from '../../utils';
 import { customMap } from './custom';

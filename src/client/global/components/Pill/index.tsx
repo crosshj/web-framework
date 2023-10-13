@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Chip } from '@mui/material';
 import { Icon } from '..';
 import { useData } from '../../hooks';

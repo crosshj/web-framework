@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Stack, Typography, Button } from '@mui/material';
 
 import { SplashScreen } from '../../global/layouts';

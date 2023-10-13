@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { extensible } from '../utils';
 import { getItemStyle } from './getItemStyle';
 

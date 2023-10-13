@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { FormControlLabel, Checkbox as MuiCheckbox } from '@mui/material';
 //import { gridVariantMap } from '../utils/grid';
 import { useData } from '../../hooks/useData.js';

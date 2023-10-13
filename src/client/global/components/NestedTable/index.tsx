@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as I from '@mui/icons-material';
 import {
 	KeyboardArrowDownRounded,
