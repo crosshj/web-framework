@@ -1,6 +1,4 @@
-//import App from './App';
-
-const App = 'I am an application';
+import App from './App';
 
 export { App };
 export default {

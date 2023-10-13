@@ -10,7 +10,10 @@
         "prepublishOnly": "npm run build",
         "build": "rm -rf dist && rollup -c"
     },
-    "main": "dist/index.mjs",
+    "exports": {
+        "./client": "./dist/client.js",
+        "./server": "./dist/server.js"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Anthroware/web-framework.git"

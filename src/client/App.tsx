@@ -21,7 +21,7 @@ import * as React from 'react';
 
 export default function App(args: any) {
 	console.log({ args });
-	return <div>hey man</div>;
+	return <div>TESTING APP</div>;
 	// return (
 	// 	<UserProvider>
 	// 		<ThemeProvider theme={theme}>
