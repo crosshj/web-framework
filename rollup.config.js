@@ -5,7 +5,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 // import replace from '@rollup/plugin-replace';
-import nodePolyfills from 'rollup-plugin-polyfill-node';
+//import nodePolyfills from 'rollup-plugin-polyfill-node';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default [
@@ -27,7 +27,7 @@ export default [
 			graphql(),
 			commonjs(),
 			typescript(),
-			nodePolyfills(),
+			//nodePolyfills(),
 		],
 		onwarn(warning, warn) {
 			if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
