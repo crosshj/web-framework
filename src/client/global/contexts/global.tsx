@@ -1,12 +1,11 @@
 import React from 'react';
-import { createContext } from 'react';
 
 import { submitFormData } from '../services';
 import { toast } from 'react-toastify';
 import { Routes } from './global/routes';
 import { StateManager } from '../../state/state';
 
-export const GlobalContext = createContext({});
+export const GlobalContext = React.createContext({});
 
 export const GlobalProvider = ({ api, children }: any) => {
 	const [selectedMenu]: any = StateManager.useListener('menu');

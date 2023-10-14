@@ -5,12 +5,12 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 
-import MUIComponents from '../_MUI';
+import { components as MUIComponents } from '../_MUI';
 import { Icon } from '..';
 import { Alert, Box, Divider, Typography } from '@mui/material';
-import { useTheme } from '@emotion/react';
 import { CodeBlock } from '../CodeBlock/CodeBlock';
 import { dedent } from '../../utils';
+import { useTheme } from '../../hooks';
 
 const Header = ({ node, level, ...props }: any) => {
 	return <Typography variant={'h' + level} {...props} my={4} />;

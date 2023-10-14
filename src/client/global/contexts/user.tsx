@@ -4,7 +4,7 @@ import {
 	useUser as useAuth0User,
 } from '@auth0/nextjs-auth0';
 
-export const UserContext = React.createContext(undefined);
+export const UserContext = React.createContext({});
 
 const CustomUserProvider = ({ children }: any) => {
 	const { user: Auth0User, isLoading } = useAuth0User();

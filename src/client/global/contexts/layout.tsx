@@ -1,9 +1,9 @@
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
-import { createContext, useEffect, useState } from 'react';
 
-export const LayoutContext = createContext();
+export const LayoutContext = React.createContext({});
 
-export const LayoutProvider = ({ children }) => {
+export const LayoutProvider = ({ children }: any) => {
 	const theme = useTheme();
 	const [open, setOpen] = useState(true);
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
@@ -11,7 +11,7 @@ export const LayoutProvider = ({ children }) => {
 	const handleToggleDrawer = () => {
 		setOpen((oldState) => {
 			if (!matches) {
-				localStorage.setItem('drawerOpen', !oldState);
+				localStorage.setItem('drawerOpen', !oldState + '');
 			}
 			return !oldState;
 		});

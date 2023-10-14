@@ -130,4 +130,6 @@ const adapters = Object.entries(MUIComponents).reduce(
 	{},
 );
 
+export const components = MUIComponents;
+
 export default adapters;

@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { createContext, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { submitFormData } from '../services';
 import { StateManager } from '../../state/state';
 import * as _ from 'lodash';
 
-export const FlowContext = createContext();
+export const FlowContext = React.createContext({});
 
 export const FlowProvider = ({ children }: any) => {
 	const [globalFlowQueue, setQueue]: any =
 		StateManager.useListener('flowQueue');
-	const [step, setStep] = useState();
+	const [step, setStep] = useState({} as any);
 	const [flows, setFlows] = useState([]);
 
 	const addFlow = (flow: any) => {

@@ -16,7 +16,7 @@ const themes = {
 	greenfield: greenfieldTheme,
 };
 
-export const ThemeContext = React.createContext(undefined);
+export const ThemeContext = React.createContext({});
 
 export const ThemeProvider = (args: any) => {
 	const { children, theme: whichTheme } = args || {};
