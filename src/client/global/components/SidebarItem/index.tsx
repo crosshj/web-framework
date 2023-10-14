@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, useMediaQuery, useTheme } from '@mui/material';
 import * as M from '@mui/material';
 import * as S from './styles';

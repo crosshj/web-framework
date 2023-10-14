@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon, Button } from '../../../../components';
 import { getddmmyyDate, iCompare } from '../../../../utils';
 import { statusMap, iconMap } from '../../../../components/utils';

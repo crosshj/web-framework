@@ -1,4 +1,3 @@
-import React from 'react';
 import { Stack } from '@mui/material';
 import { ToggleButtonGroup } from '..';
 import { StateManager } from '../../../state/state';

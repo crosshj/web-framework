@@ -5,7 +5,6 @@
 // #                                                                      #
 // ########################################################################
 
-import React from 'react';
 import * as M from '@mui/material';
 import { Checkbox, Chip, TextField, Typography } from '@mui/material';
 import MUIGeneric from '../_MUI';
@@ -113,7 +112,7 @@ export const extensible = (args: any) => {
 				};
 
 				/* tslint:disable-next-line */
-				const Component = supported[type];
+				const Component = (supported as any)[type];
 
 				return <Component key={key} _src={x.props} {...foldedProps} />;
 			})}

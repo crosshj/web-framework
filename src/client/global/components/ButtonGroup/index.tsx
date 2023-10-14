@@ -1,6 +1,5 @@
-import React from 'react';
 import { Button, ButtonGroup as MuiButtonGroup } from '@mui/material';
-import { useGlobal } from '../../hooks';
+import { useGlobal } from '../../hooks/useGlobal';
 
 export const ButtonGroup = ({ buttons, type, target, ...props }: any) => {
 	const { dispatch }: any = useGlobal();

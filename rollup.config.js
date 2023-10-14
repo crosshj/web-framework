@@ -19,6 +19,10 @@ export default [
 				sourcemap: true,
 				exports: 'named',
 				plugins: [filesize()],
+				globals: {
+					react: 'React',
+					'react-dom': 'ReactDOM',
+				},
 			},
 		],
 		plugins: [

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Fragment } from 'react';
 import { useTheme, useMediaQuery, SwipeableDrawer } from '@mui/material';
 import { useLayout } from '../../hooks';

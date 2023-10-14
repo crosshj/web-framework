@@ -1,4 +1,3 @@
-import React from 'react';
 import * as _ from 'lodash';
 import * as M from '@mui/material';
 import { StateManager } from '../../../state/state';

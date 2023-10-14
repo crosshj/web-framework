@@ -2,7 +2,12 @@ import { Grid, MenuItem, TextField } from '@mui/material';
 import { gridVariantMap } from '../utils/grid';
 import { StateManager } from '../../../state/state';
 
-const fieldContentChildren = ({ name, select, renderedOptions, ...rest }) => (
+const fieldContentChildren = ({
+	name,
+	select,
+	renderedOptions,
+	...rest
+}: any) => (
 	<TextField
 		select={select}
 		name={name}
@@ -18,7 +23,7 @@ const fieldContentChildren = ({ name, select, renderedOptions, ...rest }) => (
 	</TextField>
 );
 
-const FieldContent = (fieldProps) => {
+const FieldContent = (fieldProps: any) => {
 	const {
 		select,
 		options,
@@ -30,13 +35,13 @@ const FieldContent = (fieldProps) => {
 
 	const renderedOptions =
 		select && options?.length > 0 ? (
-			options?.map((option) => (
+			options?.map((option: any) => (
 				<MenuItem key={option?.value} value={option?.value}>
 					{option?.label}
 				</MenuItem>
 			))
 		) : (
-			<MenuItem key={0} value={null} disabled={true}>
+			<MenuItem key={0} disabled={true}>
 				No Options
 			</MenuItem>
 		);
@@ -61,16 +66,16 @@ export const Input = ({
 	fieldName,
 	fullWidth = true,
 	...props
-}) => {
-	const [thisValue, thisSetter] = StateManager.useListener(
+}: any) => {
+	const [thisValue, thisSetter]: any = StateManager.useListener(
 		props?._src?.useData,
 	);
 	//console.log({ props, thisValue });
-	const wrappedOnChange = (event) => {
+	const wrappedOnChange = (event: any) => {
 		thisSetter(event.target.value);
 	};
 
-	const gridProps = gridVariantMap[gridVariant];
+	const gridProps = (gridVariantMap as any)[gridVariant];
 
 	if (hidden) return null;
 

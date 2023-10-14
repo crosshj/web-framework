@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link as MuiLink } from '@mui/material';
 import { useGlobal } from '../../../hooks';
 

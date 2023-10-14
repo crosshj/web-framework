@@ -1,4 +1,3 @@
-import React from 'react';
 import { Stack } from '@mui/material';
 
 export const ActionsControl = ({ children }: any) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { getColor } from '../../utils';
 import { extensible } from '../utils';
 import { getColumns } from './styles';

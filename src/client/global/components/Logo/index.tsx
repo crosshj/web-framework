@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './styles';
 import svg from './svg';
 import { InlineSrcSVG } from '../../utils/svgHelpers';

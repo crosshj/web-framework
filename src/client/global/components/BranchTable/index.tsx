@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	TableContainer,
 	Table as MuiTable,
@@ -110,17 +109,18 @@ export const BranchTable = ({
 						backgroundColor: 'white',
 					}}
 				>
-					{visibleColumns.map((col) => {
+					{visibleColumns.map((col: any) => {
 						//let field;
 						let index;
 						let item;
 						let target = rows;
 						for (const param in _params) {
 							index = target.findIndex(
-								(row) => row._id === _params[param],
+								(row: any) => row._id === _params[param],
 							);
 							item = target[index];
-							target = param !== level ? item?.children : null;
+							target =
+								param !== level + '' ? item?.children : null;
 							// field += `[${index}]${
 							// 	target !== null ? '.children' : ''
 							// }`;
@@ -134,17 +134,19 @@ export const BranchTable = ({
 						});
 						if (col.children) {
 							const cases = col.children.filter(
-								(x) => x.type.toLowerCase() === 'case',
+								(x: any) => x.type.toLowerCase() === 'case',
 							);
 							const trueCase = cases.find(
-								(x) => x.props.when === row[x.props.property],
+								(x: any) =>
+									x.props.when === row[x.props.property],
 							);
 							if (trueCase) {
 								debugger;
 								value = row[col.field];
 								const renderCell =
-									renderMode[trueCase.props.variant] ||
-									renderMode['text'];
+									(renderMode as any)[
+										trueCase.props.variant
+									] || renderMode['text'];
 								cell = renderCell({
 									value,
 									colDef: { ...col, ...trueCase },

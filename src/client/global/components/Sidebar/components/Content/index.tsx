@@ -1,4 +1,3 @@
-import React from 'react';
 import { Divider, List } from '@mui/material';
 import { SidebarItem, ToggleColorTheme } from '../../..';
 

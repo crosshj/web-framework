@@ -1,4 +1,3 @@
-import React from 'react';
 import { TableHead as MuiTableHead, TableRow, TableCell } from '@mui/material';
 
 //import PropTypes from 'prop-types';

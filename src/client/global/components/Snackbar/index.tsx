@@ -1,4 +1,3 @@
-import React from 'react';
 import { Alert, Button, Snackbar as MuiSnackbar } from '@mui/material';
 import { useState } from 'react';
 

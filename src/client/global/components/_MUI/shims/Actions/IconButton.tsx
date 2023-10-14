@@ -1,7 +1,6 @@
-import React from 'react';
 import * as _ from 'lodash';
 
-import { Icon } from '../../..';
+import { Icon } from '../../../Icon';
 import { StateManager } from '../../../../../state/state';
 
 import { getUseDataProp } from '../getUseDataProp';

@@ -4,11 +4,11 @@ import { Menu as MuiMenu, Stack } from '@mui/material';
 import { useState } from 'react';
 import { Button } from '..';
 
-export const Menu = ({ text, label, variant, children }) => {
+export const Menu = ({ label, variant, children }: any) => {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
 
-	const handleClick = (event) => {
+	const handleClick = (event: any) => {
 		setAnchorEl(event.currentTarget);
 	};
 

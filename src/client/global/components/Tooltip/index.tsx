@@ -1,4 +1,3 @@
-import React from 'react';
 import { Stack, Tooltip as MuiTooltip } from '@mui/material';
 import { forwardRef } from 'react';
 import { Icon } from '..';

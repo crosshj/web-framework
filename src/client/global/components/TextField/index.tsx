@@ -1,4 +1,3 @@
-import React from 'react';
 import * as M from '@mui/material';
 import { gridVariantMap } from '../utils/grid';
 import { StateManager } from '../../../state/state';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, IconButton } from '@mui/material';
 import { ChevronLeft, Menu } from '@mui/icons-material';
 import * as S from './styles';
@@ -8,7 +7,7 @@ import { Link } from '../../../router';
 import { useLayout } from '../../hooks';
 
 export const Header = ({ menus }: any) => {
-	const { open = false, handleToggleDrawer = null } = useLayout() || {};
+	const { open = false, handleToggleDrawer = null }: any = useLayout() || {};
 
 	return (
 		<Box sx={{ height: '70px' }}>

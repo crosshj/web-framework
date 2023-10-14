@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowDownward, ArrowUpward, MoreVert } from '@mui/icons-material';
 import { IconButton, Stack, TableCell, Typography } from '@mui/material';
 import { useState } from 'react';

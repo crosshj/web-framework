@@ -1,4 +1,3 @@
-import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { Dialog as Modal, DialogContent, IconButton } from '@mui/material';
 import { StateManager } from '../../../state/state';

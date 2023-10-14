@@ -6,6 +6,7 @@ import { UserProvider, ThemeProvider } from './global/contexts';
 import { Global } from './global';
 import { StateManager } from './state/state';
 import { Routes } from './global/contexts/global/routes';
+import './global/utils/warningsAreNotErrors';
 
 const theme = new URLSearchParams(document.location.search).get('theme');
 

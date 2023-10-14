@@ -1,4 +1,3 @@
-import React from 'react';
 import * as M from '@mui/material';
 
 export const PageContent = ({ children }: any) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon } from '../../..';
 import { useEffect, useState } from 'react';
 import { TimeClockStatus, TimeDisplayer, TimeLabel, Timer } from './style';

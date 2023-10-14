@@ -1,4 +1,3 @@
-import React from 'react';
 import { cloneElement } from 'react';
 import { StateManager } from '../../../state/state';
 

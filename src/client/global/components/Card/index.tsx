@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import { KeyboardArrowUp, Menu } from '@mui/icons-material';
 import * as S from './styles';

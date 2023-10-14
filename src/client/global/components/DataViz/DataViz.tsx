@@ -1,4 +1,3 @@
-import React from 'react';
 import * as Recharts from 'recharts';
 import { handleProps } from './handleProps';
 import { StateManager } from '../../../state/state';
