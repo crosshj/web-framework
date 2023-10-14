@@ -53,18 +53,3 @@ export const ThemeProvider = (args: any) => {
 		</ThemeContext.Provider>
 	);
 };
-
-/*
-
-- breadth of theme
-	- how much does branding affect "core" colors?
-
-
-- ability to customize and switch
-	- actual switching is ignored for now
-	- branded/white-label settings
-	- how can I easily switch branded visuals?
-
-
-
-*/
