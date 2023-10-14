@@ -1,6 +1,6 @@
 import { parse } from 'graphql/language/parser.js';
 import { print } from 'graphql/language/printer.js';
-import { dump } from 'js-yaml';
+//import { dump } from 'js-yaml';
 
 const extractOperationName = (document) => {
 	let operationName = undefined;
@@ -54,15 +54,17 @@ export const graphQLClient = {
 		const options = {
 			method: 'POST',
 			headers: {
-				//'Content-Type': 'application/json',
-				//'Content-Type': 'text/plain',
-				'Content-Type': 'application/yaml',
+				'Content-Type': 'application/json',
 			},
-			body: dump({
-				operationName,
-				variables: variablesRest,
-				...argsRest,
-			}),
+			body: JSON.stringify(
+				{
+					operationName,
+					variables: variablesRest,
+					...argsRest,
+				},
+				null,
+				2,
+			),
 		};
 		return fetchAPI(url, options);
 	},
