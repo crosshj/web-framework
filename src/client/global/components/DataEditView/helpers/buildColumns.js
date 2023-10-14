@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderMode } from '../../utils';
+import { renderMode } from '../../utils/renderMode';
 
 // TODO: assess whether dispatch is deprecated or not
 export const buildColumns = (columns = [], rowMatrix, dispatch) => {

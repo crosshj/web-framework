@@ -122,13 +122,30 @@ const MUIComponents = {
 	MUI_Stepper: Generic('Stepper'),
 };
 
-const adapters = Object.entries(MUIComponents).reduce(
-	(a, [k, v]) => ({
-		...a,
-		[k]: genericAdapter(v),
-	}),
-	{},
-);
+// const adapters = Object.entries(MUIComponents).reduce(
+// 	(a, [k, v]) => ({
+// 		...a,
+// 		[k]: genericAdapter(v),
+// 	}),
+// 	{},
+// );
+
+const adapters = {
+	Box: genericAdapter(MUIComponents.Box),
+	Button: genericAdapter(MUIComponents.Button),
+	Container: genericAdapter(MUIComponents.Container),
+	Checkbox: genericAdapter(MUIComponents.Checkbox),
+	Chip: genericAdapter(MUIComponents.Chip),
+	Divider: genericAdapter(MUIComponents.Divider),
+	IconButton: genericAdapter(MUIComponents.IconButton),
+	Link: genericAdapter(MUIComponents.Link),
+	Radio: genericAdapter(MUIComponents.Radio),
+	Stack: genericAdapter(MUIComponents.Stack),
+	Switch: genericAdapter(MUIComponents.Switch),
+	TextField: genericAdapter(MUIComponents.TextField),
+	Typography: genericAdapter(MUIComponents.Typography),
+	MUI_Stepper: genericAdapter(MUIComponents.MUI_Stepper),
+};
 
 export const components = MUIComponents;
 

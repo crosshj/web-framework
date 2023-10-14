@@ -1,9 +1,9 @@
 import React from 'react';
 import { Stack } from '@mui/material';
-import { useGlobal } from '../../global';
+import { useGlobal } from '../../global/hooks/useGlobal';
 
 export const Link = ({ to, href, children, ...props }: any) => {
-	const { navigate } = useGlobal() || {};
+	const { navigate }: any = useGlobal() || {};
 
 	const handleClick = (e: any) => {
 		e.preventDefault();

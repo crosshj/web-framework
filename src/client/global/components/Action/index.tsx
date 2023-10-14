@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton } from '@mui/material';
-import { Icon } from '..';
+import { Icon } from '../Icon';
 
 export const Action = ({ handleClick, icon, color, hasValidFlow }: any) => {
 	return (

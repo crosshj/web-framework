@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import { Icon } from '../..';
-import { iconMap } from '../../utils';
+import { Icon } from '../../Icon';
+import { iconMap } from '../../utils/icon';
 import { colorMap, getColor } from '../utils/color';
 import { getFormatFunction } from '../utils/format';
 import { getItemSize } from '../utils/size';

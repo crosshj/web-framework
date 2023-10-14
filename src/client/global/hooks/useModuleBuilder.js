@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useApi } from '.';
+import { useApi } from './useApi';
 import { StateManager } from '../../state/state';
 
 export const useModuleBuilder = ({

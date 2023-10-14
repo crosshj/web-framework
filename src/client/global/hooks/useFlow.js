@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { FlowContext } from '../contexts';
+import { FlowContext } from '../contexts/flow';
 
 export const useFlow = () => {
 	return useContext(FlowContext);
