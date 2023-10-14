@@ -1,6 +1,5 @@
 import React from 'react';
 import { useApi, useUser } from './hooks';
-//import { useModuleBuilder } from './hooks';
 import { MainLayout } from './layouts/MainLayout';
 import { LoadingScreen, WelcomeScreen } from './screens';
 import { FlowProvider, GlobalProvider, LayoutProvider } from './contexts';
@@ -9,8 +8,8 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 import { Framework } from '../framework';
-//import { ToastContainer } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { getMenus } from './services/getMenus';
 import { parseProperties } from './utils';
@@ -55,8 +54,7 @@ const menuMap = (x: any, i: any) => ({
 });
 
 export const Global = () => {
-	//const { user, isLoading } = useUser();
-	const { user, isLoading }: any = {};
+	const { user, isLoading }: any = useUser();
 	const [state, setState]: any = StateManager.useListener(
 		undefined,
 		undefined,
@@ -106,7 +104,7 @@ export const Global = () => {
 								<LoadingScreen show={!menus || !menus.length} />
 								<MainLayout menus={menus}>
 									<Framework />
-									{/* <ToastContainer /> */}
+									<ToastContainer />
 								</MainLayout>
 							</LocalizationProvider>
 						</FlowProvider>

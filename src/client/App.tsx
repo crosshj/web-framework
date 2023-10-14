@@ -1,6 +1,7 @@
 import React from 'react';
 import 'urlpattern-polyfill';
-//import './App.css';
+import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
 import { UserProvider, ThemeProvider } from './global/contexts';
 import { Global } from './global';
 import { StateManager } from './state/state';
@@ -21,7 +22,7 @@ export default function App(args: any) {
 	return (
 		<UserProvider>
 			<ThemeProvider theme={theme}>
-				{/* <CssBaseline /> */}
+				<CssBaseline />
 				<Global />
 			</ThemeProvider>
 		</UserProvider>

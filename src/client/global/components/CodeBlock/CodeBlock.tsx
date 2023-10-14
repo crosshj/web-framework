@@ -3,9 +3,7 @@ import * as _ from 'lodash';
 import hljs from 'highlight.js';
 import { Box } from '@mui/material';
 import { useTheme } from '../../hooks';
-
-//TODO: css plugin for rollup!
-//import 'highlight.js/styles/github.css';
+import 'highlight.js/styles/github.css';
 
 export function CodeBlock(props: any) {
 	let {

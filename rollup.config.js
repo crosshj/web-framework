@@ -7,6 +7,7 @@ import json from '@rollup/plugin-json';
 // import replace from '@rollup/plugin-replace';
 //import nodePolyfills from 'rollup-plugin-polyfill-node';
 import externals from 'rollup-plugin-node-externals';
+import css from 'rollup-plugin-import-css';
 
 export default [
 	{
@@ -21,6 +22,9 @@ export default [
 			},
 		],
 		plugins: [
+			css({
+				output: 'client.css',
+			}),
 			externals({
 				deps: false,
 				peerDeps: true,

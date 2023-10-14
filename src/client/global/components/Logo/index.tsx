@@ -14,10 +14,12 @@ export const Logo = ({ variant = 'single', hasTag, ...rest }: any) => {
 			: url.includes('beta')
 			? 'BETA'
 			: '';
+	const Tag = S.Tag as any;
+	const Logo = S.Logo as any;
 	return (
-		<S.Logo variant={variant} {...rest}>
+		<Logo variant={variant} {...rest}>
 			<img src={InlineSrcSVG(svgString)} alt="Logo" />
-			{hasTag && <S.Tag variant={enviroment}>{enviroment}</S.Tag>}
-		</S.Logo>
+			{hasTag && <Tag variant={enviroment}>{enviroment}</Tag>}
+		</Logo>
 	);
 };
