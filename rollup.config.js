@@ -6,7 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 // import replace from '@rollup/plugin-replace';
 //import nodePolyfills from 'rollup-plugin-polyfill-node';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import externals from 'rollup-plugin-node-externals';
 
 export default [
 	{
@@ -21,7 +21,12 @@ export default [
 			},
 		],
 		plugins: [
-			peerDepsExternal(),
+			externals({
+				deps: false,
+				peerDeps: true,
+				devDeps: true,
+				//packagePath <<<--- useful for server vs client
+			}),
 			resolve(),
 			json(),
 			graphql(),

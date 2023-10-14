@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 import svg from './svg';
+import { InlineSrcSVG } from '../../utils/svgHelpers';
 
 export const Logo = ({ variant = 'single', hasTag, ...rest }: any) => {
 	const url = window.location.host;
@@ -13,10 +14,9 @@ export const Logo = ({ variant = 'single', hasTag, ...rest }: any) => {
 			: url.includes('beta')
 			? 'BETA'
 			: '';
-
 	return (
 		<S.Logo variant={variant} {...rest}>
-			<img src={svgString} alt="Logo" />
+			<img src={InlineSrcSVG(svgString)} alt="Logo" />
 			{hasTag && <S.Tag variant={enviroment}>{enviroment}</S.Tag>}
 		</S.Logo>
 	);
