@@ -1,10 +1,12 @@
+import React from 'react';
 import * as M from '@mui/material';
 import { gridVariantMap } from '../utils/grid';
 import { StateManager } from '../../../state/state';
 
-const get = (t, path) => path && path.split('.').reduce((r, k) => r?.[k], t);
+const get = (t: any, path: any) =>
+	path && path.split('.').reduce((r: any, k: any) => r?.[k], t);
 
-export const TextField = (args) => {
+export const TextField = (args: any) => {
 	const {
 		id,
 		label,
@@ -13,9 +15,9 @@ export const TextField = (args) => {
 		underline = true,
 		disabled = false,
 	} = args;
-	const [state] = StateManager.useListener();
-	const [idValue, setId] = StateManager.useListener(id);
-	const gridProps = gridVariantMap[gridVariant];
+	const [state]: any = StateManager.useListener();
+	const [idValue, setId]: any = StateManager.useListener(id);
+	const gridProps = (gridVariantMap as any)[gridVariant];
 
 	let { value = '' } = args;
 	if (typeof idValue === 'undefined') {
@@ -28,7 +30,7 @@ export const TextField = (args) => {
 	} else {
 		value = idValue;
 	}
-	const updateState = (e) => setId(e?.target?.value);
+	const updateState = (e: any) => setId(e?.target?.value);
 
 	return (
 		<M.Grid {...gridProps} sx={{ height: '6rem' }}>

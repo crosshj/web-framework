@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Table as MuiTable,
 	TableContainer,
@@ -17,39 +18,39 @@ import { StateManager } from '../../../state/state';
 export const ResourceListView = ({
 	label,
 	actions,
-	targetQuery,
 	pagination = true,
 	tableBody,
 	filterOn = '',
 	source,
 	children,
-	...props
-}) => {
-	const [state] = StateManager.useListener();
+}: any) => {
+	const [state]: any = StateManager.useListener();
 	let { search, searchRowKey } = state || {};
 	const [loading, setLoading] = useState(false);
 	const [columns, setColumns] = useState([]);
 	const [rows, setRows] = useState([]);
 	const isLoading = loading;
 	const [order, setOrder] = useState('asc');
-	const [orderBy, setOrderBy] = useState(columns ? columns[0]?.key : null);
+	const [orderBy, setOrderBy] = useState(
+		columns ? (columns[0] as any)?.key : null,
+	);
 	const [page, setPage] = useState(0);
 	const [rowsPerPage, setRowsPerPage] = useState(10);
 
 	if (filterOn && state[filterOn]) {
 		search = state[filterOn];
 	}
-	const handleRequestSort = (event, property) => {
+	const handleRequestSort = (_event: any, property: any) => {
 		const isAsc = orderBy === property && order === 'asc';
 		setOrder(isAsc ? 'desc' : 'asc');
 		setOrderBy(property);
 	};
 
-	const handleChangePage = (event, newPage) => {
+	const handleChangePage = (_event: any, newPage: any) => {
 		setPage(newPage);
 	};
 
-	const handleChangeRowsPerPage = (event) => {
+	const handleChangeRowsPerPage = (event: any) => {
 		setRowsPerPage(parseInt(event.target.value, 10));
 		setPage(0);
 	};
@@ -59,14 +60,15 @@ export const ResourceListView = ({
 		? sortedRows?.filter(searchRows({ columns, search, searchRowKey }))
 		: sortedRows;
 
-	const columnsToBeShown = columns?.filter((c) => !c.hidden);
+	const columnsToBeShown = columns?.filter((c: any) => !c.hidden);
 
 	const parsedRows =
-		searchedRows?.map((row, rowIndex) => {
+		searchedRows?.map((row: any, _rowIndex: any) => {
 			const dataToBeShown = row?.filter(
-				(column, columnIndex) => !columns[columnIndex]?.hidden,
+				(_column: any, columnIndex: any) =>
+					!(columns[columnIndex] as any)?.hidden,
 			);
-			return dataToBeShown.map((cell, columnIndex) => {
+			return dataToBeShown.map((cell: any, columnIndex: any) => {
 				const column = columnsToBeShown[columnIndex];
 				return (
 					<CellContent
@@ -92,9 +94,11 @@ export const ResourceListView = ({
 		const { rows = [] } = state[source] || {};
 
 		setRows(rows);
-		const parsedColumns = children.map(({ props: columnProps, key }) => {
-			return { ...columnProps, key, ...columnProps?.props };
-		});
+		const parsedColumns = children.map(
+			({ props: columnProps, key }: any) => {
+				return { ...columnProps, key, ...columnProps?.props };
+			},
+		);
 		setColumns(parsedColumns);
 
 		setLoading(false);
@@ -103,7 +107,7 @@ export const ResourceListView = ({
 	useEffect(() => {
 		if (!columns || columns.length === 0) return;
 
-		setOrderBy(columns[0]?.key);
+		setOrderBy((columns[0] as any)?.key);
 	}, [columns]);
 	return (
 		<Stack spacing={0} sx={{ width: '100%' }} border="none">

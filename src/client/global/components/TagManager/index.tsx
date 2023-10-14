@@ -1,6 +1,7 @@
+import React from 'react';
 import { TextField, Typography, Autocomplete, Grid } from '@mui/material';
 
-const FieldContent = (props) => {
+const FieldContent = (props: any) => {
 	const {
 		label,
 		readOnly,

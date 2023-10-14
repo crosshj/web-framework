@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Box,
 	FormControl,
@@ -17,7 +18,7 @@ import {
 	TimesheetCollapseTableCell,
 } from './style';
 
-const TimesheetCollapse = ({ open, rows, menuInItems, menuOutItems }) => {
+const TimesheetCollapse = ({ open, rows, menuInItems, menuOutItems }: any) => {
 	const [edit, setEdit] = useState(false);
 	const [inLabel, setInLabel] = useState('');
 	const [outLabel, setOutLabel] = useState('');
@@ -28,7 +29,7 @@ const TimesheetCollapse = ({ open, rows, menuInItems, menuOutItems }) => {
 			<TimesheetCollapseContainer in={open} timeout="auto" unmountOnExit>
 				<Box>
 					<Table size="small" aria-label="purchases">
-						<TableBody fullWidth>
+						<TableBody>
 							{!edit && (
 								<>
 									<TableRow>
@@ -56,14 +57,16 @@ const TimesheetCollapse = ({ open, rows, menuInItems, menuOutItems }) => {
 													setInLabel(e.target.value)
 												}
 											>
-												{menuInItems.map((item) => (
-													<MenuItem
-														key={item.id}
-														value={item.value}
-													>
-														{item.value}
-													</MenuItem>
-												))}
+												{menuInItems.map(
+													(item: any) => (
+														<MenuItem
+															key={item.id}
+															value={item.value}
+														>
+															{item.value}
+														</MenuItem>
+													),
+												)}
 											</Select>
 										</Grid>
 
@@ -76,14 +79,16 @@ const TimesheetCollapse = ({ open, rows, menuInItems, menuOutItems }) => {
 													setOutLabel(e.target.value)
 												}
 											>
-												{menuOutItems.map((item) => (
-													<MenuItem
-														key={item.id}
-														value={item.value}
-													>
-														{item.value}
-													</MenuItem>
-												))}
+												{menuOutItems.map(
+													(item: any) => (
+														<MenuItem
+															key={item.id}
+															value={item.value}
+														>
+															{item.value}
+														</MenuItem>
+													),
+												)}
 											</Select>
 										</Grid>
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from '@mui/material';
 import { ActionStack, Title } from './style.js';
 
@@ -6,7 +7,7 @@ export const StepButtons = ({
 	nextButtonLabel = '',
 	handleBack,
 	handleForward,
-}) => {
+}: any) => {
 	return (
 		<ActionStack direction="row">
 			<Title variant="button" onClick={handleBack}>

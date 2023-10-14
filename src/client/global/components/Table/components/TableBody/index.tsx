@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	LinearProgress,
 	Skeleton,
@@ -6,7 +7,7 @@ import {
 	TableBody as MuiTableBody,
 } from '@mui/material';
 
-export const TableBody = ({ rows, columnsLength, label, isLoading }) => {
+export const TableBody = ({ rows, columnsLength, label, isLoading }: any) => {
 	return (
 		<>
 			{isLoading && (
@@ -30,10 +31,10 @@ export const TableBody = ({ rows, columnsLength, label, isLoading }) => {
 
 			<MuiTableBody>
 				{rows?.map(
-					(row, rowIndex) =>
+					(row: any, rowIndex: any) =>
 						row && (
 							<TableRow key={`${label}-${rowIndex}`}>
-								{row?.map((value, columnIndex) => {
+								{row?.map((value: any, columnIndex: any) => {
 									/*
 									if cell is a button type and last of the row, make it sticky
 									position: sticky;
@@ -62,7 +63,7 @@ export const TableBody = ({ rows, columnsLength, label, isLoading }) => {
 									);
 								})}
 							</TableRow>
-						)
+						),
 				)}
 			</MuiTableBody>
 		</>

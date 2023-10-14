@@ -32,11 +32,7 @@ const Tabs = (args: any = {}) => {
 				{...props}
 			>
 				{tabChildren.map((x: any, i: any) => (
-					<M.ToggleButton
-						label={x.props.label || ''}
-						key={'tabs-' + i}
-						value={i}
-					>
+					<M.ToggleButton key={'tabs-' + i} value={i}>
 						{x.props.label}
 					</M.ToggleButton>
 				))}

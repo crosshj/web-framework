@@ -1,18 +1,19 @@
+import React from 'react';
 import { TextField } from '@mui/material';
 //import { generateWeeks } from '../utils/generateWeeks';
 import { StateManager } from '../../../state/state';
 import { useOptions } from '../../hooks';
 
-export function WeekPicker({ name, targetQuery, disableWeekPicker }) {
-	const optionsList = useOptions({ targetQuery });
+export function WeekPicker({ name, targetQuery, disableWeekPicker }: any) {
+	const optionsList = useOptions({ targetQuery } as any);
 	const options = optionsList || [{ value: 0, label: '' }];
 
-	const [value = 0, setSelectedOption] = StateManager.useListener(name);
+	const [value = 0, setSelectedOption]: any = StateManager.useListener(name);
 
 	// const getDates = () => {
 	// 	return generateWeeks(5);
 	// };
-	const handleChange = (e) => {
+	const handleChange = (e: any) => {
 		if (!name) return;
 		setSelectedOption(e?.target?.value);
 	};
@@ -30,7 +31,7 @@ export function WeekPicker({ name, targetQuery, disableWeekPicker }) {
 			onChange={handleChange}
 		>
 			{options.length > 0 &&
-				options?.map((option) => (
+				options?.map((option: any) => (
 					<option key={option.value} value={option.value}>
 						{option.label}
 					</option>

@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	ToggleButton,
 	ToggleButtonGroup as MuiToggleButtonGroup,
@@ -7,12 +8,13 @@ import {
 import { useGlobal, useMount } from '../../hooks';
 import { StateManager } from '../../../state/state';
 
-export const ToggleButtonGroup = ({ options, defaultTargetQuery }) => {
-	const [selectedListView] = StateManager.useListener('selectedListView');
-	const [loading] = StateManager.useListener('loading');
-	const { dispatch } = useGlobal();
+export const ToggleButtonGroup = ({ options, defaultTargetQuery }: any) => {
+	const [selectedListView]: any =
+		StateManager.useListener('selectedListView');
+	const [loading]: any = StateManager.useListener('loading');
+	const { dispatch }: any = useGlobal();
 
-	const handleChange = (e, target) => {
+	const handleChange = (_e: any, target: any) => {
 		if (!target) return;
 		dispatch({ type: 'selectListView', target });
 	};
@@ -31,7 +33,7 @@ export const ToggleButtonGroup = ({ options, defaultTargetQuery }) => {
 			orientation={`${matchesBigScreen ? 'horizontal' : 'vertical'}`}
 			sx={{ width: '100%' }}
 		>
-			{options?.map((option) => {
+			{options?.map((option: any) => {
 				return (
 					<ToggleButton
 						key={option?.targetQuery}

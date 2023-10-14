@@ -1,3 +1,4 @@
+import React from 'react';
 import { Icon } from '../../..';
 import { useEffect, useState } from 'react';
 import { TimeClockStatus, TimeDisplayer, TimeLabel, Timer } from './style';
@@ -9,7 +10,7 @@ const TimeClock = ({ workedTime, status }: any) => {
 	const [minutes, setMinutes] = useState('00');
 	const [currentStatus, setCurrentStatus] = useState('clocked-out');
 
-	const updateTime = (time) => {
+	const updateTime = (time: any) => {
 		setHours(Math.floor(time).toString().padStart(2, '0'));
 		setMinutes(
 			Math.round((time - Math.floor(time)) * 60)
@@ -19,6 +20,7 @@ const TimeClock = ({ workedTime, status }: any) => {
 	};
 
 	useEffect(() => {
+		let timer: any;
 		setCurrentStatus(
 			status === 'ClockedIn'
 				? 'clocked-in'
@@ -28,15 +30,14 @@ const TimeClock = ({ workedTime, status }: any) => {
 		);
 
 		if (isNaN(workedTime)) return;
-		updateTime();
+		updateTime(undefined);
 
 		if (status === 'ClockedIn') {
-			const timer = setInterval(() => {
+			timer = setInterval(() => {
 				updateTime(workedTime + SIXTIETH);
 			}, 60000);
-
-			return () => clearInterval(timer);
 		}
+		return () => timer && clearInterval(timer);
 	}, [workedTime, status]);
 
 	return (

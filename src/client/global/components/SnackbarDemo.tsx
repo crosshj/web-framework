@@ -1,16 +1,17 @@
+import React from 'react';
 import { useState, Fragment } from 'react';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 
 export function PositionedSnackbar() {
-	const [state, setState] = useState({
+	const [state, setState]: any = useState({
 		open: false,
 		vertical: 'top',
 		horizontal: 'center',
 	});
 	const { vertical, horizontal, open } = state;
 
-	const handleClick = (newState) => () => {
+	const handleClick = (newState: any) => () => {
 		setState({ open: true, ...newState });
 	};
 

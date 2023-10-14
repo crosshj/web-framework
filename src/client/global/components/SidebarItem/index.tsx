@@ -14,16 +14,19 @@ export const SidebarItem = ({
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
+	const ListItemButton = S.ListItemButton as any;
+	const ListItemIcon = S.ListItemIcon as any;
+
 	return (
 		<Link to={item?.TargetContentName}>
-			<S.ListItemButton
+			<ListItemButton
 				isActive={isActive}
 				disabled={disabled}
 				onClick={matches ? handleToggleDrawer : null}
 			>
-				<S.ListItemIcon isActive={isActive}>
+				<ListItemIcon isActive={isActive}>
 					<M.Icon>{item.icon}</M.Icon>
-				</S.ListItemIcon>
+				</ListItemIcon>
 
 				{open && (
 					<S.ListItemText>
@@ -32,7 +35,7 @@ export const SidebarItem = ({
 						</Typography>
 					</S.ListItemText>
 				)}
-			</S.ListItemButton>
+			</ListItemButton>
 		</Link>
 	);
 };

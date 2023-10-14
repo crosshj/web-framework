@@ -1,3 +1,4 @@
+import React from 'react';
 import { Typography, Stack } from '@mui/material';
 import { Button } from '..';
 import { SuccessStack, SuccessIcon, ErrorIcon } from './style';
@@ -17,8 +18,8 @@ export const Success = ({
 	leftButtonErrorRoute,
 	rightButtonErrorRoute,
 	status = 'success',
-}) => {
-	const [results] = StateManager.useListener('results');
+}: any) => {
+	const [results]: any = StateManager.useListener('results');
 	const isSuccess =
 		(results && results === 'success') || status === 'success';
 

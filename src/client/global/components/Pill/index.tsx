@@ -24,7 +24,7 @@ export const Pill = ({ useData: useDataKey, children }: any) => {
 	const thisCase = cases.find(
 		({ when }: any) => when.toLowerCase() === value?.toLowerCase(),
 	) ||
-		cases.find((x) => x.when === '???') || {
+		cases.find((x: any) => x.when === '???') || {
 			when: '',
 			color: '#fff0',
 			icon: '',

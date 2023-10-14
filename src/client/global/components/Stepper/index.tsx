@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Stack,
 	Step,
@@ -10,21 +11,21 @@ import { Step as StepFunction } from '..';
 import { useGlobal, useMount } from '../../hooks';
 import { StateManager } from '../../../state/state';
 
-export const Stepper = ({ children } = {}) => {
+export const Stepper = ({ children = [] } = {}) => {
 	const steps =
 		children.filter(
-			(child) =>
+			(child: any) =>
 				child.type === StepFunction || child.props.type === 'Step',
 		) || [];
 
-	const [selectedStep = 0] = StateManager.useListener('selectedStep');
-	const [previousMenu] = StateManager.useListener('previousMenu');
-	const { navigate } = useGlobal();
+	const [selectedStep = 0]: any = StateManager.useListener('selectedStep');
+	const [previousMenu]: any = StateManager.useListener('previousMenu');
+	const { navigate }: any = useGlobal();
 
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-	const step = steps[selectedStep];
+	const step = steps[selectedStep] as any;
 	const isLastStep = selectedStep + 1 === steps?.length;
 
 	const handleBack = () => {
@@ -55,7 +56,9 @@ export const Stepper = ({ children } = {}) => {
 			>
 				{steps.map((step, index) => (
 					<Step key={index}>
-						<StepLabel>{step?.props?.label || ''}</StepLabel>
+						<StepLabel>
+							{(step as any)?.props?.label || ''}
+						</StepLabel>
 					</Step>
 				))}
 			</MuiStepper>

@@ -1,18 +1,15 @@
+import React from 'react';
 import { Alert, Button, Snackbar as MuiSnackbar } from '@mui/material';
 import { useState } from 'react';
 
-export const Snackbar = ({ severity, message }) => {
+export const Snackbar = ({ severity, message }: any) => {
 	const [open, setOpen] = useState(false);
 
 	const handleClick = () => {
 		setOpen(true);
 	};
 
-	const handleClose = (event, reason) => {
-		if (reason === 'clickaway') {
-			return;
-		}
-
+	const handleClose = (_event: any) => {
 		setOpen(false);
 	};
 

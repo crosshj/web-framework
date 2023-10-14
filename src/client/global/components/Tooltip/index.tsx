@@ -1,10 +1,11 @@
+import React from 'react';
 import { Stack, Tooltip as MuiTooltip } from '@mui/material';
 import { forwardRef } from 'react';
 import { Icon } from '..';
 import * as S from './styles';
 
-export const Tooltip = ({ children, ...props }) => {
-	const Component = forwardRef((childrenProps, ref) => (
+export const Tooltip = ({ children, ...props }: any) => {
+	const Component = forwardRef((childrenProps, ref: any) => (
 		<S.Div {...childrenProps} ref={ref}>
 			<Icon icon="info_rounded" />
 		</S.Div>

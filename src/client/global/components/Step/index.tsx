@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box } from '@mui/material';
 import { StepButtons } from '..';
 
@@ -8,10 +9,10 @@ export const Step = ({
 	isLastStep = false,
 	handleBack,
 	handleForward,
-}) => {
+}: any) => {
 	return (
 		<>
-			<Box spacing={1}>{children}</Box>
+			<Box>{children}</Box>
 			{!isLastStep && (
 				<StepButtons
 					previousButtonLabel={previousButtonLabel}

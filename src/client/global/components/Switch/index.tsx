@@ -1,3 +1,4 @@
+import React from 'react';
 import { cloneElement } from 'react';
 import { StateManager } from '../../../state/state';
 
@@ -11,15 +12,15 @@ export const Switch = ({
 	key,
 	label,
 	...rest
-}) => {
-	const [sourceValue] = StateManager.useListener(source);
+}: any) => {
+	const [sourceValue]: any = StateManager.useListener(source);
 	const value = sourceValue ? sourceValue[param] : 'client';
 
 	return (
 		<>
 			{children
-				?.filter((child) => child?.props?.props?.value === value)
-				?.map((child) => cloneElement(child, { ...rest }))}
+				?.filter((child: any) => child?.props?.props?.value === value)
+				?.map((child: any) => cloneElement(child, { ...rest }))}
 		</>
 	);
 };

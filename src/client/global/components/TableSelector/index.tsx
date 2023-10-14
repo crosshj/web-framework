@@ -1,15 +1,17 @@
+import React from 'react';
 import { Stack } from '@mui/material';
 import { ToggleButtonGroup } from '..';
 import { StateManager } from '../../../state/state';
 
-export const TableSelector = ({ targetQuery, options, children }) => {
-	const [selectedListView] = StateManager.useListener('selectedListView');
+export const TableSelector = ({ targetQuery, options, children }: any) => {
+	const [selectedListView]: any =
+		StateManager.useListener('selectedListView');
 
 	// const selectedOption = options.find(
 	// 	(option) => option.targetQuery === selectedListView
 	// );
 	const filteredChildren = children.find(
-		(child) => child?.props?.props?.targetQuery === selectedListView,
+		(child: any) => child?.props?.props?.targetQuery === selectedListView,
 	);
 	return (
 		<Stack py={2} spacing={4}>

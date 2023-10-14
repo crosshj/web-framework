@@ -1,6 +1,7 @@
+import React from 'react';
 import { Stack, Typography } from '@mui/material';
 
-export const PageHeader = ({ title, children }) => {
+export const PageHeader = ({ title, children }: any) => {
 	return (
 		<Stack
 			direction={{ xs: 'column', md: 'row' }}

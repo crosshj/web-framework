@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	CircularProgress,
 	InputAdornment,
@@ -12,7 +13,7 @@ export const TableInput = ({
 	loading,
 	OptionListKey: targetQuery,
 	skipQuery,
-}) => {
+}: any) => {
 	const options = useOptions({ targetQuery, skipQuery });
 
 	return (
@@ -33,7 +34,7 @@ export const TableInput = ({
 		>
 			{options &&
 				options?.length > 0 &&
-				options?.map((option) => (
+				options?.map((option: any) => (
 					<MenuItem key={option?.value} value={option?.value}>
 						{option?.label}
 					</MenuItem>

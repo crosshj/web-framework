@@ -7,11 +7,11 @@ import * as S from './styles';
 import { SidebarContent } from './components/Content/index.jsx';
 import { StateManager } from '../../../state/state';
 
-export const Sidebar = ({ menus }) => {
+export const Sidebar = ({ menus }: any) => {
 	//const [loading] = StateManager.useListener('loading');
-	const [activeMenu] = StateManager.useListener('menu');
+	const [activeMenu]: any = StateManager.useListener('menu');
 
-	const { open = false, handleToggleDrawer = null } = useLayout();
+	const { open = false, handleToggleDrawer = null }: any = useLayout();
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -29,12 +29,14 @@ export const Sidebar = ({ menus }) => {
 		activeMenu: activeMenu?.target,
 	};
 
+	const SidebarContainer = S.SidebarContainer as any;
+
 	return (
 		<>
 			{matches ? (
-				<S.SidebarContainer open={open}>
+				<SidebarContainer open={open}>
 					<SidebarContent {...contentProps} />
-				</S.SidebarContainer>
+				</SidebarContainer>
 			) : (
 				<Fragment>
 					<SwipeableDrawer

@@ -53,7 +53,7 @@ const rows = [
 	createData('Gingerbread', 1),
 ];
 
-const Timesheet = () => {
+const Timesheet = (_props: any) => {
 	const [add, setAdd] = useState(false);
 	const timeTypes = [
 		{ id: 1, label: 'Time 1', value: 'time1' },
