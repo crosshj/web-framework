@@ -25,6 +25,7 @@ export default [
 				deps: false,
 				peerDeps: true,
 				devDeps: true,
+				builtinsPrefix: 'ignore',
 				//packagePath <<<--- useful for server vs client
 			}),
 			resolve(),
