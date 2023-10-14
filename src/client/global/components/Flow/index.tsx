@@ -9,7 +9,7 @@ import { Refresh } from './Refresh';
 import { Insert } from './Insert';
 
 //TODO: possible candidate for refactor
-const getFlowArgsIndex = (flowArgs = {}) => {
+const getFlowArgsIndex = (flowArgs: any = {}) => {
 	const getIndexRegExp = /\[(\d+?)\]/;
 	const possibleIndexes = getIndexRegExp.exec(flowArgs?.path || '');
 
@@ -18,10 +18,9 @@ const getFlowArgsIndex = (flowArgs = {}) => {
 		: undefined;
 };
 
-export const Flow = (args) => {
+export const Flow = (args: any) => {
 	const { id: key, children } = args;
-
-	const { step = {}, setStep, addFlow, removeFlow } = useFlow() || {};
+	const { step = {}, setStep, addFlow, removeFlow }: any = useFlow() || {};
 	const {
 		flow: currentFlow,
 		step: currentStep,
@@ -48,21 +47,23 @@ export const Flow = (args) => {
 
 	const currentProps = currentChild?.props;
 
-	const FlowStepComponent = {
-		Confirm,
-		Submit: Query,
-		Query,
-		FlowStep: Query,
-		SetData,
-		Navigate,
-		Refresh,
-		Insert,
-	}[currentProps.type];
+	const FlowStepComponent = (
+		{
+			Confirm,
+			Submit: Query,
+			Query,
+			FlowStep: Query,
+			SetData,
+			Navigate,
+			Refresh,
+			Insert,
+		} as any
+	)[currentProps.type];
 
 	const onStep = () => {
 		const arrIndex = getFlowArgsIndex(currentStepArgs?.path);
 
-		setStep((prev) => ({
+		setStep((prev: any) => ({
 			flow: key,
 			step: (prev?.step || 0) + 1,
 			args: {

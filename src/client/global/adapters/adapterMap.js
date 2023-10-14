@@ -1,4 +1,4 @@
-import { Flow } from '../components';
+import { Flow } from '../components/Flow';
 import { Alert } from '../components/Alert';
 import { CodeBlock } from '../components/CodeBlock/CodeBlock';
 import { DatePicker } from '../components/DatePicker';
@@ -69,7 +69,6 @@ export const adapterMap = {
 	PageContent: pageContentAdapter,
 	MenuItem: linkAdapter,
 	LinkMenu: linkMenuAdapter,
-	// Button: linkAdapter,
 	Step: genericAdapter(Step),
 	FileUploader: fileUploaderAdapter,
 	StepFooter: stepFooterAdapter,
@@ -81,7 +80,6 @@ export const adapterMap = {
 	Search: searchAdapter,
 	TagManager: tagManagerAdapter,
 	Grid: gridAdapter,
-	Data: dataAdapter,
 	ButtonSubmit: linkAdapter,
 	Spacing: spacingAdapter,
 	DatePicker: genericAdapter(DatePicker),
@@ -93,7 +91,6 @@ export const adapterMap = {
 	BranchTable: dataEditViewAdapter,
 	NestedTable: dataEditViewAdapter,
 	ErrorThrower: genericAdapter(ErrorThrower),
-	Flow: genericAdapter(Flow),
 	Tabs: genericAdapter(Tabs?.Tabs),
 	TabContainer: genericAdapter(Tabs?.TabContainer),
 	Dialog: genericAdapter(Dialog),
@@ -108,4 +105,8 @@ export const adapterMap = {
 	CodeBlock: genericAdapter(CodeBlock),
 	TalentMobilePage: genericAdapter(TalentMobilePage),
 	Markdown: genericAdapter(Markdown),
+
+	//TODO: use these in framework:Selector without component/adapter
+	Data: dataAdapter,
+	Flow: genericAdapter(Flow),
 };
