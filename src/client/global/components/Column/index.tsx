@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Box,
 	Typography,
@@ -7,8 +8,14 @@ import {
 } from '@mui/material';
 import { visuallyHidden } from '@mui/utils';
 
-export const Column = ({ order, orderBy, loading, onRequestSort, column }) => {
-	const createSortHandler = (property) => (event) => {
+export const Column = ({
+	order,
+	orderBy,
+	loading,
+	onRequestSort,
+	column,
+}: any) => {
+	const createSortHandler = (property: any) => (event: any) => {
 		onRequestSort(event, property);
 	};
 	return (

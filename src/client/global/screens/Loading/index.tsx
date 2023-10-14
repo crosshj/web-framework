@@ -2,7 +2,7 @@ import React from 'react';
 import { CircularProgress, Stack } from '@mui/material';
 import * as S from './styles';
 
-export const LoadingScreen = ({ show }) => {
+export const LoadingScreen = ({ show }: any) => {
 	if (!show) return null;
 	return (
 		<S.Container>

@@ -18,7 +18,7 @@ const getDataFromDB = (...args: any) => {
 	const isRefresh = typeof _0.message === 'string';
 	if (isRefresh) {
 		const name = _0.message.replace('refresh:', '');
-		const cachedArgs = argsCache[name];
+		const cachedArgs = (argsCache as any)[name];
 		const hasCache = Array.isArray(cachedArgs);
 		//console.log('Data component refreshed data for ' + name);
 		return hasCache ? getData(...cachedArgs) : undefined;
@@ -26,7 +26,7 @@ const getDataFromDB = (...args: any) => {
 
 	// keep track of most recent args, make available to call later
 	//console.log('Data component got data from DB!', { args });
-	argsCache[name] = args;
+	(argsCache as any)[name] = args;
 	return getData(...args);
 };
 
@@ -44,14 +44,18 @@ export const Data = (argsSrc: any) => {
 		debug,
 		//validate,
 	} = args;
-	const [, thisSetter] = StateManager.useListener(name, undefined, {
+	const [, thisSetter]: any = StateManager.useListener(name, undefined, {
 		debug,
 		note: 'components/Data',
 	});
-	const [{ param } = {}] = StateManager.useListener('menu', undefined, {
-		note: 'components/Data',
-	});
-	const [globalState, setState] = StateManager.useListener(
+	const [{ param = '' } = {}]: any = StateManager.useListener(
+		'menu',
+		undefined,
+		{
+			note: 'components/Data',
+		},
+	);
+	const [globalState, _setState]: any = StateManager.useListener(
 		undefined,
 		undefined,
 		{
@@ -82,7 +86,7 @@ export const Data = (argsSrc: any) => {
 
 	useEffect(() => {
 		const subCfg = {};
-		if (debug) subCfg.debug = true;
+		if (debug) (subCfg as any).debug = true;
 		return StateManager.subscribe('refresh:' + name, getDataFromDB, subCfg);
 	}, [debug, name]);
 
@@ -158,7 +162,7 @@ export const Data = (argsSrc: any) => {
 
 		const queryArgs = {};
 		if (paramName && param) {
-			queryArgs[paramName] = param;
+			(queryArgs as any)[paramName] = param;
 		}
 
 		// console.log(`Data component: get ${name} from ${proc} - ${procArg}`);

@@ -3,7 +3,7 @@ import { Button, ButtonGroup as MuiButtonGroup } from '@mui/material';
 import { useGlobal } from '../../hooks';
 
 export const ButtonGroup = ({ buttons, type, target, ...props }: any) => {
-	const { dispatch } = useGlobal();
+	const { dispatch }: any = useGlobal();
 	const handleClick = (e: any) => {
 		if (e.stopPropagation) {
 			e.stopPropagation();

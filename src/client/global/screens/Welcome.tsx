@@ -23,11 +23,7 @@ export const WelcomeScreen = () => {
 				</a>
 				<a href="/api/auth/register">
 					<Stack>
-						<Button
-							variant="secondary"
-							color="secondary"
-							label="test"
-						>
+						<Button color="secondary">
 							<Typography variant="button" color="white">
 								Register
 							</Typography>

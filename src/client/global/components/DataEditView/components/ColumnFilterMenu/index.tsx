@@ -1,3 +1,4 @@
+import React from 'react';
 import { FormControlLabel, Menu, Stack, Switch } from '@mui/material';
 
 export const ColumnFilterMenu = ({
@@ -6,10 +7,10 @@ export const ColumnFilterMenu = ({
 	columns,
 	handleClose,
 	handleToggleShowColumn,
-}) => {
+}: any) => {
 	return (
 		<Menu open={open} anchorEl={anchorEl} onClose={handleClose}>
-			{columns?.map((col, index) => {
+			{columns?.map((col: any, index: any) => {
 				return (
 					<Stack
 						key={'column-filter-' + index}
@@ -21,10 +22,10 @@ export const ColumnFilterMenu = ({
 						<FormControlLabel
 							disabled={col?.disabled}
 							control={<Switch checked={col?.visible} />}
-							onChange={(e) => {
+							onChange={(e: any) => {
 								handleToggleShowColumn(
 									col.label,
-									e.target.checked
+									e.target.checked,
 								);
 								handleClose();
 							}}

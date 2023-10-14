@@ -11,8 +11,8 @@ export const BarGraph = ({
 	format,
 	//hasCard = true,
 	value,
-}) => {
-	const total = data?.reduce((acc, item) => {
+}: any) => {
+	const total = data?.reduce((acc: any, item: any) => {
 		return acc + parseFloat(item?.value);
 	}, 0);
 
@@ -43,9 +43,13 @@ export const BarGraph = ({
 				direction={{ xs: 'column', md: 'row' }}
 			>
 				{loading && data.length === 0 ? (
-					<Skeleton variant="rounded" width="100%" height="100%" />
+					<Skeleton
+						variant={'rounded' as any}
+						width="100%"
+						height="100%"
+					/>
 				) : (
-					data?.map((item, index) => {
+					data?.map((item: any, index: any) => {
 						return (
 							<BarGraphItem
 								key={index}

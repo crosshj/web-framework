@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	LinearProgress,
 	TableRow,
@@ -11,7 +12,7 @@ export const TableBody = ({
 	columnsLength,
 	label,
 	isLoading,
-}) => {
+}: any) => {
 	return (
 		<>
 			{isLoading && (
@@ -34,9 +35,9 @@ export const TableBody = ({
 			)}
 
 			<MuiTableBody>
-				{rows?.map((row, rowId) => (
+				{rows?.map((row: any, rowId: any) => (
 					<TableRow key={`${label}-${rowId}`}>
-						{columns?.map((column, columnIndex) => {
+						{columns?.map((column: any, columnIndex: any) => {
 							const value = row[column?.field];
 							const { renderCell } = column;
 							const cell = renderCell({

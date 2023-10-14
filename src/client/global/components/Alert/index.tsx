@@ -1,6 +1,7 @@
+import React from 'react';
 import * as M from '@mui/material';
 
-export const Alert = (args) => {
+export const Alert = (args: any) => {
 	const {
 		children,
 		severity = 'info',

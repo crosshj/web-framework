@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	TableContainer,
 	Table as MuiTable,
@@ -15,7 +16,7 @@ import { TableToolbar } from '..';
 import { CollapsibleTable } from '../CollapsibleTable';
 import * as S from '../CollapsibleTable/styles';
 
-const getType = (level) => {
+const getType = (level: any) => {
 	const remainder = level % 3;
 	switch (remainder) {
 		case 0:
@@ -40,17 +41,15 @@ export const BranchTable = ({
 	isLoading,
 	handleRequestSort,
 	handleToggleShowColumn,
-	nestingParams,
 	columnsToShow,
 	nestingLevels,
 	editable,
 	handleAddRow,
-	values,
-}) => {
-	const getNestedBody = (data, levels, level = 0) => {
+}: any) => {
+	const getNestedBody = (data: any, levels: any, level = 0) => {
 		const isLastLevel = level === levels - 1;
 		const type = getType(level);
-		return data.map((row) => {
+		return data.map((row: any) => {
 			const { _params, children } = row;
 			const openActions =
 				level === levels - 1
@@ -69,7 +68,7 @@ export const BranchTable = ({
 						values={row}
 						editable={editable}
 						isLastLevel={isLastLevel}
-						openActions={openActions}
+						openActions={openActions as any}
 					>
 						{getNestedBody(children, levels, level + 1)}
 						{isLastLevel && editable && (
@@ -118,7 +117,7 @@ export const BranchTable = ({
 						let target = rows;
 						for (const param in _params) {
 							index = target.findIndex(
-								(row) => row._id === _params[param]
+								(row) => row._id === _params[param],
 							);
 							item = target[index];
 							target = param !== level ? item?.children : null;
@@ -135,10 +134,10 @@ export const BranchTable = ({
 						});
 						if (col.children) {
 							const cases = col.children.filter(
-								(x) => x.type.toLowerCase() === 'case'
+								(x) => x.type.toLowerCase() === 'case',
 							);
 							const trueCase = cases.find(
-								(x) => x.props.when === row[x.props.property]
+								(x) => x.props.when === row[x.props.property],
 							);
 							if (trueCase) {
 								debugger;

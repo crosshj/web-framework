@@ -26,11 +26,7 @@ export const UiKit = () => {
 						Colors
 					</Typography>
 					<Stack direction="row" alignItems="center" spacing={2}>
-						<Button
-							variant="contained"
-							color="primary"
-							label="primary"
-						>
+						<Button variant="contained" color="primary">
 							Primary
 						</Button>
 						<Button variant="contained" color="secondary">
@@ -53,7 +49,7 @@ export const UiKit = () => {
 					</Stack>
 				</Box>
 
-				<Divider width="100%" />
+				<Divider />
 
 				<Box my={3}>
 					<Typography variant="h4" mb={2} color="primary">
@@ -65,7 +61,7 @@ export const UiKit = () => {
 						<Button variant="contained">Contained</Button>
 					</Stack>
 				</Box>
-				<Divider width="100%" />
+				<Divider />
 				<Box my={3}>
 					<Typography variant="h4" mb={2}>
 						Text Fields
@@ -86,7 +82,7 @@ export const UiKit = () => {
 						/>
 					</Stack>
 				</Box>
-				<Divider width="100%" />
+				<Divider />
 				<Box>
 					<Typography variant="h4" color="primary">
 						Typography
@@ -106,14 +102,14 @@ export const UiKit = () => {
 					<Typography variant="body1">Typography body1</Typography>
 					<Typography variant="body2">Typography body2</Typography>
 				</Box>
-				<Divider width="100%" />
+				<Divider />
 			</Stack>
 			<Stack>
 				<Typography variant="h4" color="primary" mb={3}>
 					Table
 				</Typography>
 				<Table />
-				<Divider width="100%" />
+				<Divider />
 				<Box my={4}>
 					<Typography variant="h4" color="primary" mb={3}>
 						Snackbars

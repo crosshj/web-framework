@@ -45,8 +45,8 @@ export const FlowProvider = ({ children }: any) => {
 		call,
 		params,
 		flatten, // onSuccess,
-	} // onError,
-	: any) => {
+		// onError,
+	}: any) => {
 		const input = [
 			{
 				name,

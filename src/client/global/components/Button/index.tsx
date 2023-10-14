@@ -25,14 +25,15 @@ export const Button = ({
 	// });
 	const loading = false;
 
-	const [{ param: globalParam } = {}] = StateManager.useListener('menu');
-	const { dispatch } = useGlobal() || {};
+	const [{ param: globalParam = '' } = {}]: any =
+		StateManager.useListener('menu');
+	const { dispatch }: any = useGlobal() || {};
 	// const { loading } = state || {};
-	const { runFlow } = useFlow();
+	const { runFlow }: any = useFlow();
 
 	//console.log(`Button loading: ${loading}`);
 
-	const handleClick = async (e) => {
+	const handleClick = async (e: any) => {
 		let { row: rowSrc, useData } = props;
 		const { __rowIndex, __rowStateKey } = props;
 		if (

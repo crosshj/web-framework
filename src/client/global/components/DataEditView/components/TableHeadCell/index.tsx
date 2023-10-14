@@ -1,12 +1,12 @@
+import React from 'react';
 import { ArrowDownward, ArrowUpward, MoreVert } from '@mui/icons-material';
 import { IconButton, Stack, TableCell, Typography } from '@mui/material';
 import { useState } from 'react';
 
-export const TableHeadCell = ({ order, label, onRequestSort, field }) => {
+export const TableHeadCell = ({ order, label, onRequestSort, field }: any) => {
 	const [showSort, setShowSort] = useState(false);
 
-	const SortIcon =
-		order === 'asc' ? <ArrowUpward color="grey" /> : <ArrowDownward />;
+	const SortIcon = order === 'asc' ? <ArrowUpward /> : <ArrowDownward />;
 	return (
 		<TableCell
 			onMouseEnter={() => setShowSort(true)}

@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	KeyboardArrowDownRounded,
 	KeyboardArrowUpRounded,
@@ -10,13 +11,16 @@ import { IconButton } from '@mui/material';
 import { useState } from 'react';
 import * as S from './styles';
 
+const TableCell = S.TableCell as any;
+const TableRow = S.TableRow as any;
+
 export const CollapsibleTable = ({
 	type,
 	columns,
 	values,
 	children,
 	openActions = [],
-}) => {
+}: any) => {
 	const [open, setOpen] = useState(true);
 	//const nonTotals = columns.filter((c) => c.total !== 'true');
 	//const totals = columns.filter((c) => c.total === 'true');
@@ -24,7 +28,7 @@ export const CollapsibleTable = ({
 	// 	const value = values[col.field];
 	// 	return <S.TableCell>{value}</S.TableCell>;
 	// });
-	const getTotal = (col) => (all, child) => {
+	const getTotal = (col: any) => (all: any, child: any) => {
 		if (child.children)
 			return all + child.children.reduce(getTotal(col), 0);
 		if (Number.isNaN(Number(child[col.field]))) return all;
@@ -33,14 +37,14 @@ export const CollapsibleTable = ({
 	};
 	const RowColumn =
 		(rowType = '') =>
-		(col, i) => {
+		(col: any, i: any) => {
 			let value;
 			if (col.total) {
 				value = values.children.reduce(getTotal(col), 0);
 			}
 			return (
-				<S.TableCell
-					type={type}
+				<TableCell
+					type={type as any}
 					style={{
 						borderBottomLeftRadius:
 							rowType === 'footer' && i === 0
@@ -50,7 +54,7 @@ export const CollapsibleTable = ({
 					}}
 				>
 					{value && Number(value).toFixed(2)}
-				</S.TableCell>
+				</TableCell>
 			);
 		};
 
@@ -103,7 +107,7 @@ export const CollapsibleTable = ({
 			<>
 				{open &&
 					openActions &&
-					openActions.map((action) => (
+					openActions.map((_action: any) => (
 						<IconButton color="inherit">
 							<SaveAs />
 						</IconButton>
@@ -113,12 +117,12 @@ export const CollapsibleTable = ({
 		// const OpenActionButtons = <div>hello</div>;
 
 		return (
-			<S.TableRow
+			<TableRow
 				type={type}
 				onClick={handleToggleOpen}
 				style={{ padding: 0 }}
 			>
-				<S.TableCell
+				<TableCell
 					colspan={firstColumnSpan}
 					type={type}
 					style={{
@@ -128,10 +132,10 @@ export const CollapsibleTable = ({
 					}}
 				>
 					<FirstColumn />
-				</S.TableCell>
+				</TableCell>
 				{showHeaderTotal &&
 					columns.slice(firstColumnSpan).map(RowColumn())}
-				<S.TableCell
+				<TableCell
 					type={type}
 					sx={{
 						display: 'flex',
@@ -155,29 +159,29 @@ export const CollapsibleTable = ({
 							<KeyboardArrowDownRounded />
 						)}
 					</IconButton>
-				</S.TableCell>
-			</S.TableRow>
+				</TableCell>
+			</TableRow>
 		);
 	};
 
 	const AdderRow = () => {
 		return (
-			<S.TableRow>
-				<S.TableCell
+			<TableRow>
+				<TableCell
 					colspan={columns.length + 1}
 					style={{ textAlign: 'center' }}
 				>
 					<a href="#">Add Some+</a>
-				</S.TableCell>
-			</S.TableRow>
+				</TableCell>
+			</TableRow>
 		);
 	};
 
 	const FooterRow = () => {
 		return (
-			<S.TableRow type={type}>
+			<TableRow type={type}>
 				{columns.map(RowColumn('footer'))}
-				<S.TableCell
+				<TableCell
 					type={type}
 					sx={{
 						position: 'sticky',
@@ -185,8 +189,8 @@ export const CollapsibleTable = ({
 						borderBottomRightRadius: '10px',
 						borderBottom: 0,
 					}}
-				></S.TableCell>
-			</S.TableRow>
+				/>
+			</TableRow>
 		);
 	};
 
