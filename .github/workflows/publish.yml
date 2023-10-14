@@ -16,7 +16,7 @@ jobs:
           scope: 'awoss'
       - run: npm install
       - run: npm run build
-      - run: npm publish --ignore-prepublish
+      - run: npm publish --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # Push tag to GitHub if package.json version's tag is not tagged
