@@ -15,7 +15,7 @@ import { getMenus } from './services/getMenus';
 import { parseProperties } from './utils';
 import { SnakeCase } from './utils';
 import { StateManager } from '../state/state';
-import { getContext } from './services';
+import { getContext } from './services/getContext';
 
 import getContextQuery from './graphql/getContext.gql';
 import getListViewQuery from './graphql/getListView.gql';

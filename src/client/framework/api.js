@@ -28,7 +28,8 @@ export const resolveRequestDocument = (document) => {
 const fetchAPI = async (url, options) => {
 	try {
 		const result = await fetch(url, options);
-		return await result.json();
+		const { data } = await result.json();
+		return data;
 	} catch (err) {
 		console.info(err);
 	}
