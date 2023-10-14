@@ -40,6 +40,16 @@ export const graphQLClient = {
 		const queryParams = typeof tag !== 'undefined' ? `?${tag}` : '';
 		const url = `/api/graphql${queryParams}`;
 		const { query, operationName } = resolveRequestDocument(args0);
+
+		if (Array.isArray(variables?.input)) {
+			for (const i of variables.input) {
+				if (!i?.args) continue;
+				try {
+					i.args = JSON.parse(i.args);
+				} catch (e) {}
+			}
+		}
+
 		const options = {
 			method: 'POST',
 			headers: {
@@ -48,10 +58,10 @@ export const graphQLClient = {
 			},
 			body:
 				query +
-				'-----' +
+				'\n     \n' +
 				JSON.stringify(
 					{
-						operationName,
+						//operationName,
 						variables: variablesRest,
 						...argsRest,
 					},
