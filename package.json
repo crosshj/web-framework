@@ -1,5 +1,5 @@
 {
-    "version": "0.0.0-23",
+    "version": "0.0.0-24",
     "name": "@awoss/web",
     "description": "",
     "scripts": {
@@ -38,7 +38,6 @@
         "date-fns": "2.29.2",
         "date-fns-tz": "2.0.0",
         "graphql": "16.8.1",
-        "graphql-request": "4.2.0",
         "highlight.js": "11.8.0",
         "json5": "2.2.3",
         "lodash": "4.17.21",
