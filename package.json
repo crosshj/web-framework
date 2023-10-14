@@ -1,5 +1,5 @@
 {
-    "version": "0.0.0-20",
+    "version": "0.0.0-21",
     "name": "@awoss/web",
     "description": "",
     "scripts": {
@@ -39,7 +39,7 @@
         "@mui/x-date-pickers": "5.0.0-beta.7",
         "date-fns": "2.29.2",
         "date-fns-tz": "2.0.0",
-        "graphql": "16.3.0",
+        "graphql": "16.8.1",
         "graphql-request": "4.2.0",
         "highlight.js": "11.8.0",
         "json5": "2.2.3",
@@ -47,7 +47,7 @@
         "prop-types": "15.8.1",
         "react-markdown": "8.0.7",
         "react-toastify": "9.0.8",
-        "recharts": "2.1.15",
+        "recharts": "2.8.0",
         "remark-breaks": "3.0.3",
         "remark-gfm": "3.0.1",
         "schema-to-yup": "1.12.14",
