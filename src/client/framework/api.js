@@ -57,8 +57,6 @@ export const graphQLClient = {
 				'Content-Type': 'text/plain',
 			},
 			body:
-				query +
-				'\n     \n' +
 				JSON.stringify(
 					{
 						//operationName,
@@ -67,7 +65,9 @@ export const graphQLClient = {
 					},
 					null,
 					2,
-				),
+				) +
+				'\n     ' +
+				query,
 		};
 		return fetchAPI(url, options);
 	},
