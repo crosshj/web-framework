@@ -43,14 +43,21 @@ export const graphQLClient = {
 		const options = {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
+				//'Content-Type': 'application/json',
+				'Content-Type': 'text/plain',
 			},
-			body: JSON.stringify({
-				operationName,
-				query,
-				variables: variablesRest,
-				...argsRest,
-			}),
+			body:
+				query +
+				'-----' +
+				JSON.stringify(
+					{
+						operationName,
+						variables: variablesRest,
+						...argsRest,
+					},
+					null,
+					2,
+				),
 		};
 		return fetchAPI(url, options);
 	},
