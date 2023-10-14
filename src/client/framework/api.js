@@ -12,7 +12,7 @@ export const graphQLClient = {
 		const [args0, variables, ...argsRest] = args;
 		const { tag, ...variablesRest } = variables || {};
 		const queryParams = typeof tag !== 'undefined' ? `?${tag}` : '';
-		const url = `${process.env.REACT_APP_BASE_URL}/api/graphql${queryParams}`;
+		const url = `/api/graphql${queryParams}`;
 		const options = {
 			method: 'POST',
 			headers: {
