@@ -26,10 +26,10 @@ const FieldContent = (props: any) => {
 					{...rest}
 					disabled={readOnly}
 					multiple
-					onChange={(e, v) => handleChange(v)}
+					onChange={(_e, v) => handleChange(v)}
 					inputValue={search}
 					value={selectedTags || []}
-					onInputChange={(e, v) => setSearch(v)}
+					onInputChange={(_e, v) => setSearch(v)}
 					options={tags || []}
 					renderInput={(params) => {
 						return (
@@ -47,6 +47,6 @@ const FieldContent = (props: any) => {
 	);
 };
 
-export const TagManager = ({ name, context, ...props }) => {
+export const TagManager = ({ name, context, ...props }: any) => {
 	return <FieldContent {...props} />;
 };

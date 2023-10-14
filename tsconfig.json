@@ -17,7 +17,8 @@
         "strictNullChecks": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "typeRoots": ["node_modules/@types", "src/@types"]
+        "typeRoots": ["node_modules/@types", "src/@types"],
+        "outDir": "dist"
     },
     "include": ["src"],
     "exclude": ["build", "node_modules", "dist", "rollup.config.js"]

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TableHead as MuiTableHead, TableRow } from '@mui/material';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { cloneElement } from 'react';
 
 export const TableHead = ({
