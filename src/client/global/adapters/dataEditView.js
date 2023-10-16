@@ -1,7 +1,7 @@
-import { DataEditView } from '../components';
+import { DataEditView } from '../components/DataEditView';
 import { BranchTable } from '../components/BranchTable';
 import { NestedTable } from '../components/NestedTable';
-import { useTable } from '../hooks';
+import { useTable } from '../hooks/useTable';
 
 const DataEditViewAdapter = (args) => {
 	const { type } = args;

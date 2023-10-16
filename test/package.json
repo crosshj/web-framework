@@ -1,14 +1,21 @@
 {
-    "name": "test",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "name": "test-aowss-web",
+    "private": true,
+    "version": "0.0.0",
     "scripts": {
-        "test": "node index.mjs"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
-    "author": "",
-    "license": "ISC",
+    "dependencies": {
+        "@awoss/web": "..",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
     "devDependencies": {
-        "@awoss/web": "0.0.0-7"
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react-swc": "^3.3.2",
+        "vite": "^4.4.5"
     }
 }

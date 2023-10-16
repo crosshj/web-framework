@@ -1,5 +1,5 @@
-import { Checkbox } from '../components';
-import { getLastIdElement } from '../utils';
+import { Checkbox } from '../components/Checkbox';
+import { getLastIdElement } from '../utils/getLastIdElement';
 
 export const checkboxAdapter = ({ label, gridVariant, id, props, ...rest }) => {
 	return {

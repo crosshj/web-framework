@@ -1,4 +1,4 @@
-import { Spacing } from '../components';
+import { Spacing } from '../components/Spacing';
 
 export const spacingAdapter = ({ props }) => {
 	const { space } = props || {};

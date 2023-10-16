@@ -72,9 +72,9 @@ export const TableHead = ({
 	);
 };
 
-TableHead.propTypes = {
-	onRequestSort: PropTypes.func.isRequired,
-	columns: PropTypes.array.isRequired,
-	order: PropTypes.oneOf(['asc', 'desc']).isRequired,
-	//orderBy: PropTypes.string.isRequired,
-};
+// TableHead.propTypes = {
+// 	onRequestSort: PropTypes.func.isRequired,
+// 	columns: PropTypes.array.isRequired,
+// 	order: PropTypes.oneOf(['asc', 'desc']).isRequired,
+// 	//orderBy: PropTypes.string.isRequired,
+// };

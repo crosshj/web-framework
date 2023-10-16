@@ -1,5 +1,5 @@
 import { StateManager } from '../../state/state';
-import { Stepper } from '../components';
+import { Stepper } from '../components/Stepper';
 import { useEffect } from 'react';
 
 const StepperAdapter = ({ type, children, props }) => {

@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import * as _ from 'lodash';
 import hljs from 'highlight.js';
 import { Box } from '@mui/material';
-import { useTheme } from '../../hooks';
+import { useTheme } from '../../hooks/useTheme';
 import 'highlight.js/styles/github.css';
 
 export function CodeBlock(props: any) {

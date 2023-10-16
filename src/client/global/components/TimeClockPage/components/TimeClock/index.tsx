@@ -1,4 +1,4 @@
-import { Icon } from '../../..';
+import { Icon } from '../../../Icon';
 import { useEffect, useState } from 'react';
 import { TimeClockStatus, TimeDisplayer, TimeLabel, Timer } from './style';
 

@@ -6,8 +6,7 @@ import {
 	Select,
 	useTheme,
 } from '@mui/material';
-import { Icon } from '..';
-import { useData, useFlow } from '../../hooks';
+import { Icon } from '../Icon';
 import { getTodayLongDate } from '../../utils/getTodayLongDate';
 import { useState } from 'react';
 import TimeClock from './components/TimeClock';
@@ -21,6 +20,8 @@ import {
 	TimeclockDate,
 	TimeclockDateLine,
 } from './style';
+import { useData } from '../../hooks/useData';
+import { useFlow } from '../../hooks/useFlow';
 
 const TimeClockPage = () => {
 	const [label, setLabel] = useState('');

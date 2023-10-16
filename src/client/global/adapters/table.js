@@ -1,5 +1,5 @@
-import { Table } from '../components';
-import { actionsList } from '../utils';
+import { Table } from '../components/Table';
+import { actionsList } from '../utils/actionsList';
 
 export const tableAdapter = ({ label, props, ...rest }) => {
 	const actions =

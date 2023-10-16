@@ -8,10 +8,9 @@ import {
 	Typography,
 } from '@mui/material';
 import { AddCircleRounded } from '@mui/icons-material';
-import { renderMode } from '../utils';
+import { renderMode } from '../utils/renderMode';
 import { TableHead } from '../DataEditView/components/TableHead';
-// import { BranchRow } from './BranchRow';
-import { TableToolbar } from '..';
+import { TableToolbar } from '../TableToolbar';
 import { CollapsibleTable } from '../CollapsibleTable';
 import * as S from '../CollapsibleTable/styles';
 

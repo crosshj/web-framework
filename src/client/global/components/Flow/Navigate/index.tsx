@@ -1,11 +1,11 @@
-import { useGlobal } from '../../../hooks';
+import { useGlobal } from '../../../hooks/useGlobal';
 import { clone, replaceTokens } from '../../../utils';
 import { StateManager } from '../../../../state/state';
 
 export const Navigate = (args: any) => {
 	const { onStep, path, stepArgs: flowArgs } = args;
 	let { route } = args;
-	const { navigate } = useGlobal();
+	const { navigate }: any = useGlobal();
 
 	if (route) {
 		const _state = clone(StateManager.get());

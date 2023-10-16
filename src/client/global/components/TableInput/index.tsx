@@ -4,7 +4,7 @@ import {
 	MenuItem,
 	TextField,
 } from '@mui/material';
-import { useOptions } from '../../hooks';
+import { useOptions } from '../../hooks/useOptions';
 
 export const TableInput = ({
 	value,

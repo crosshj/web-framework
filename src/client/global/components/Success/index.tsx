@@ -1,5 +1,5 @@
 import { Typography, Stack } from '@mui/material';
-import { Button } from '..';
+import { Button } from '../Button';
 import { SuccessStack, SuccessIcon, ErrorIcon } from './style';
 import { StateManager } from '../../../state/state';
 

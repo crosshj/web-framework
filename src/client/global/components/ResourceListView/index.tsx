@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 
 import { useEffect, useState } from 'react';
-import { TableToolbar } from '..';
+import { TableToolbar } from '../TableToolbar';
 
 import { searchRows, sortRows } from '../Table/helpers';
 import { TableBody, CellContent } from '../Table/components';

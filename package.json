@@ -1,5 +1,5 @@
 {
-    "version": "0.0.0-36",
+    "version": "0.0.0-37",
     "name": "@awoss/web",
     "description": "",
     "scripts": {
@@ -76,7 +76,6 @@
         "typescript": "4.3.5"
     },
     "peerDependencies": {
-        "@auth0/nextjs-auth0": "^1.7.0",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
     }

@@ -6,9 +6,10 @@ import {
 	useMediaQuery,
 	useTheme,
 } from '@mui/material';
-import { Step as StepFunction } from '..';
-import { useGlobal, useMount } from '../../hooks';
+import { Step as StepFunction } from '../Step';
 import { StateManager } from '../../../state/state';
+import { useGlobal } from '../../hooks/useGlobal';
+import { useMount } from '../../hooks/useMount';
 
 export const Stepper = ({ children = [] } = {}) => {
 	const steps =

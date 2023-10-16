@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	Container,
 	Box,
@@ -9,8 +8,9 @@ import {
 	Divider,
 } from '@mui/material';
 
-import { PositionedSnackbar, Snackbar } from '../components';
 import { Table } from '../components/Table';
+import { Snackbar } from '../components/Snackbar';
+import { PositionedSnackbar } from '../components/SnackbarDemo';
 
 /*----------------------------------------------------------------
 table

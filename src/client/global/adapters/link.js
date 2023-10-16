@@ -1,4 +1,5 @@
-import { Button, MenuItem } from '../components';
+import { Button } from '../components/Button';
+import { MenuItem } from '../components/MenuItem';
 
 export const linkAdapter = (args) => {
 	const { type, label, props, target } = args;

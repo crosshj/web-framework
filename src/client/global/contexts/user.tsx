@@ -1,71 +1,39 @@
-import React, { useState, useMemo } from 'react';
-import {
-	UserProvider as Auth0UserProvider,
-	useUser as useAuth0User,
-} from '@auth0/nextjs-auth0';
+import React, { useState, useEffect } from 'react';
 
 export const UserContext = React.createContext({});
 
-const CustomUserProvider = ({ children }: any) => {
-	const { user: Auth0User, isLoading } = useAuth0User();
-	const [loading] = useState(false);
+const getUser = async (): Promise<any> => {
+	const x = await fetch('/api/auth/me');
+	return await x.json();
+};
 
-	const user = useMemo(() => {
-		let { name = '', picture = '' } = Auth0User || {};
-		if (
-			typeof picture === 'string' &&
-			typeof name === 'string' &&
-			name.toLowerCase().startsWith('atworkrole+')
-		) {
-			name = name.split('+').pop() || '';
-			picture = picture.replace(/at\.png$/, name.slice(0, 2) + '.png');
-		}
-		return Auth0User
-			? {
-					...Auth0User,
-					name,
-					picture,
-			  }
-			: undefined;
-	}, [Auth0User]);
-
-	// useEffect(() => {
-	// 	const cachedUser = localStorage.getItem('user');
-	// 	if (cachedUser && cachedUser !== 'undefined') {
-	// 		const parsedUser = JSON.parse(cachedUser);
-	// 		setUserData(parsedUser);
-	// 	}
-	// }, []);
-
-	// useEffect(() => {
-	// 	setLoading(false);
-	// 	if (!user) return;
-	// 	setUserData(user);
-	// 	localStorage.setItem('user', JSON.stringify(user));
-	// }, [user]);
-
-	// useEffect(() => {
-	// 	if (!userData) {
-	// 		setLoading(true);
-	// 		return;
-	// 	}
-	// 	setLoading(false);
-	// }, [userData]);
-
-	const value = {
-		user,
-		isLoading: loading || isLoading,
-	};
-
-	return (
-		<UserContext.Provider value={value}>{children}</UserContext.Provider>
-	);
+const tweakUser = (_user: any) => {
+	let { picture, name, ...rest } = _user;
+	if (
+		typeof picture === 'string' &&
+		typeof name === 'string' &&
+		name.toLowerCase().startsWith('atworkrole+')
+	) {
+		name = name.split('+').pop() || '';
+		picture = picture.replace(/at\.png$/, name.slice(0, 2) + '.png');
+	}
+	const user = { name, picture, ...rest };
+	return user;
 };
 
 export const UserProvider = ({ children }: any) => {
+	let [state, setState] = useState({ isLoading: true, user: undefined });
+
+	useEffect(() => {
+		getUser().then((user) => {
+			setState({
+				isLoading: false,
+				user: tweakUser(user),
+			});
+		});
+	}, []);
+
 	return (
-		<Auth0UserProvider>
-			<CustomUserProvider>{children}</CustomUserProvider>
-		</Auth0UserProvider>
+		<UserContext.Provider value={state}>{children}</UserContext.Provider>
 	);
 };

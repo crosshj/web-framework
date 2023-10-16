@@ -2,7 +2,7 @@ import { KeyboardArrowDown } from '@mui/icons-material';
 import { Menu as MuiMenu, Stack } from '@mui/material';
 
 import { useState } from 'react';
-import { Button } from '..';
+import { Button } from '../Button';
 
 export const Menu = ({ label, variant, children }: any) => {
 	const [anchorEl, setAnchorEl] = useState(null);

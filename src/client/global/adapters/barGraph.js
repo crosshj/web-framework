@@ -1,6 +1,6 @@
 import { StateManager } from '../../state/state';
-import { BarGraph } from '../components';
-import { getBarChartData } from '../services';
+import { BarGraph } from '../components/BarGraph';
+import { getBarChartData } from '../services/getBarChartData';
 import { useCallback, useEffect, useState } from 'react';
 
 const sortResults = (results = [], reverse) => {

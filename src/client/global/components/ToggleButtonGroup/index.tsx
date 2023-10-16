@@ -4,8 +4,9 @@ import {
 	useMediaQuery,
 	useTheme,
 } from '@mui/material';
-import { useGlobal, useMount } from '../../hooks';
 import { StateManager } from '../../../state/state';
+import { useGlobal } from '../../hooks/useGlobal';
+import { useMount } from '../../hooks/useMount';
 
 export const ToggleButtonGroup = ({ options, defaultTargetQuery }: any) => {
 	const [selectedListView]: any =

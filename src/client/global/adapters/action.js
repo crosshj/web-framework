@@ -1,4 +1,4 @@
-import { Action } from '../components';
+import { Action } from '../components/Action';
 import { useFlow } from '../hooks/useFlow.js';
 
 const ActionAdapter = (args) => {

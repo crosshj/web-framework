@@ -1,4 +1,3 @@
-import React from 'react';
 import 'urlpattern-polyfill';
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';

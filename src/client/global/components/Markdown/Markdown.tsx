@@ -5,11 +5,11 @@ import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 
 import { components as MUIComponents } from '../_MUI';
-import { Icon } from '..';
+import { Icon } from '../Icon';
 import { Alert, Box, Divider, Typography } from '@mui/material';
 import { CodeBlock } from '../CodeBlock/CodeBlock';
 import { dedent } from '../../utils';
-import { useTheme } from '../../hooks';
+import { useTheme } from '../../hooks/useTheme';
 
 const Header = ({ node, level, ...props }: any) => {
 	return <Typography variant={'h' + level} {...props} my={4} />;

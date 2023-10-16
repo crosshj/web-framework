@@ -1,7 +1,8 @@
 import { Button as MuiButton } from '@mui/material';
-import { useFlow, useGlobal } from '../../../hooks';
-import { Icon } from '../..';
+import { Icon } from '../../Icon';
 import { StateManager } from '../../../../state/state';
+import { useFlow } from '../../../hooks/useFlow';
+import { useGlobal } from '../../../hooks/useGlobal';
 
 const buttonVariantMap = {
 	text: 'text',
@@ -25,9 +26,10 @@ export const Button = (args: any = {}) => {
 
 	const loading = false;
 
-	const [{ param: globalParam } = {}]: any = StateManager.useListener('menu');
-	const { dispatch } = useGlobal() || {};
-	const { runFlow } = useFlow();
+	const [{ param: globalParam = '' } = {}]: any =
+		StateManager.useListener('menu');
+	const { dispatch }: any = useGlobal() || {};
+	const { runFlow }: any = useFlow();
 
 	if (!label && !children) return null;
 

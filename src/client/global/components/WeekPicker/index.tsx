@@ -1,7 +1,7 @@
 import { TextField } from '@mui/material';
 //import { generateWeeks } from '../utils/generateWeeks';
 import { StateManager } from '../../../state/state';
-import { useOptions } from '../../hooks';
+import { useOptions } from '../../hooks/useOptions';
 
 export function WeekPicker({ name, targetQuery, disableWeekPicker }: any) {
 	const optionsList = useOptions({ targetQuery } as any);

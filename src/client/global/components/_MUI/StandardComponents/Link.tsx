@@ -1,10 +1,10 @@
 import { Link as MuiLink } from '@mui/material';
-import { useGlobal } from '../../../hooks';
+import { useGlobal } from '../../../hooks/useGlobal';
 
 export const Link = (args: any = {}) => {
 	const { onClickShimmed, ...props } = args;
 
-	const { dispatch } = useGlobal() || {};
+	const { dispatch }: any = useGlobal() || {};
 
 	return (
 		<MuiLink

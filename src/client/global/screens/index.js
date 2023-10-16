@@ -1,3 +1,4 @@
+//DEPRECATE: index code smell
 export * from './Home';
 export * from './Loading';
 export * from './Welcome';

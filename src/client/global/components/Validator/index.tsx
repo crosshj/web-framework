@@ -1,7 +1,7 @@
 import { ObjectFromIdTree } from '../../utils/objectFromIdTree';
 import { composeYupSchema, validate as validateSchema } from './lib';
 import { StateManager } from '../../../state/state';
-import { useMount } from '../../hooks';
+import { useMount } from '../../hooks/useMount';
 
 export function useValidation(key: any) {
 	const [globalSchema]: any = StateManager.useListener(`schemas.${key}`);

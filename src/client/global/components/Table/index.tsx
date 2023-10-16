@@ -5,7 +5,7 @@ import {
 	Stack,
 } from '@mui/material';
 import { useCallback, useEffect, useState } from 'react';
-import { TableToolbar } from '..';
+import { TableToolbar } from '../TableToolbar';
 import { TableHead } from '../TableHead';
 import { searchRows, sortRows } from './helpers';
 import { TableBody, CellContent } from './components';

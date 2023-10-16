@@ -1,4 +1,4 @@
-import { useUser } from '../../hooks';
+import { useUser } from '../../hooks/useUser';
 import Avatar from '@mui/material/Avatar';
 
 import { useState } from 'react';

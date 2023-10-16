@@ -1,7 +1,7 @@
 import * as M from '@mui/material';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { useFlow } from '../../../hooks';
+import { useFlow } from '../../../hooks/useFlow';
 import { StateManager } from '../../../../state/state';
 import { clone, enhanceResults, getFilledQueryParams } from '../../../utils';
 
@@ -9,9 +9,9 @@ import Outputs from './Outputs';
 import SetData from './SetData';
 import ParseWorkflowData from './ParseWorkflowData';
 
-export const Query = (args) => {
-	const [state, setState] = useState('loading');
-	const { submit, step } = useFlow();
+export const Query = (args: any) => {
+	const [state, setState]: any = useState('loading');
+	const { submit, step }: any = useFlow();
 
 	const {
 		proc: name,
@@ -51,7 +51,7 @@ export const Query = (args) => {
 	}, [args, step]);
 
 	const onSuccess = useCallback(
-		(results) => {
+		(results: any) => {
 			const dataSources = {
 				results,
 				flowArgs: step?.args,
@@ -73,7 +73,7 @@ export const Query = (args) => {
 		[step?.args, onStep, propsRest],
 	);
 
-	const onError = useCallback((error) => {
+	const onError = useCallback((error: any) => {
 		console.log(error);
 		setState(error);
 	}, []);
@@ -83,7 +83,7 @@ export const Query = (args) => {
 	}, []);
 
 	const submitStep = useCallback(
-		(args) => {
+		(args: any) => {
 			setState('submitting');
 			if (debug) {
 				console.log({
@@ -92,7 +92,7 @@ export const Query = (args) => {
 				});
 			}
 			submit(args)
-				.then((res) => {
+				.then((res: any) => {
 					const [data] = res;
 					const resultsEnhanced = enhanceResults(data.results);
 

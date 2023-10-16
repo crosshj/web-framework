@@ -1,5 +1,6 @@
 import { Divider, List } from '@mui/material';
-import { SidebarItem, ToggleColorTheme } from '../../..';
+import { SidebarItem } from '../../../SidebarItem';
+import { ToggleColorTheme } from '../../../ToggleColorTheme';
 
 export const SidebarContent = ({
 	menus,

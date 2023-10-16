@@ -1,6 +1,5 @@
-import React from 'react';
 import { Stack, Typography } from '@mui/material';
-import { Button } from '../components';
+import { Button } from '../components/Button';
 import { Link } from '../../router';
 
 export const LogoutScreen = () => {

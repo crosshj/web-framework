@@ -1,7 +1,7 @@
 import { Chip } from '@mui/material';
-import { Icon } from '..';
-import { useData } from '../../hooks';
-import { getColor } from '../../utils';
+import { Icon } from '../Icon';
+import { useData } from '../../hooks/useData';
+import { getColor } from '../../utils/getColor';
 
 export const Pill = ({ useData: useDataKey, children }: any) => {
 	const { data: value } = useData({ key: useDataKey });

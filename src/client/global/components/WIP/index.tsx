@@ -1,5 +1,5 @@
 import { Alert, Typography } from '@mui/material';
-import { Button } from '..';
+import { Button } from '../Button';
 import * as S from './styles';
 import { StateManager } from '../../../state/state';
 import { Link } from '../../../router';

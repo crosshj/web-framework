@@ -1,5 +1,5 @@
-import { ResourceListView } from '../components';
-import { actionsList } from '../utils';
+import { ResourceListView } from '../components/ResourceListView';
+import { actionsList } from '../utils/actionsList';
 
 export const rlvAdapter = ({ label, props, ...rest }) => {
 	const actions =

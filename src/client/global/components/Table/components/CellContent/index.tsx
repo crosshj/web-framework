@@ -1,6 +1,9 @@
-import { Icon, Button } from '../../../../components';
-import { getddmmyyDate, iCompare } from '../../../../utils';
-import { statusMap, iconMap } from '../../../../components/utils';
+import { Icon } from '../../../Icon';
+import { Button } from '../../../Button';
+import { statusMap } from '../../../utils/status';
+import { iconMap } from '../../../utils/icon';
+import { iCompare } from '../../../../utils/stringUtils';
+import { getddmmyyDate } from '../../../../utils/getddmmyyDate';
 
 export const CellContent = ({ column, cell, columns, row }: any) => {
 	if (!cell) return '';

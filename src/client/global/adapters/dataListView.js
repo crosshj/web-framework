@@ -1,8 +1,8 @@
 import { StateManager } from '../../state/state';
-import { DataListView } from '../components';
-import { renderMode } from '../components/utils';
-import { useMount } from '../hooks';
-import { getData } from '../services';
+import { DataListView } from '../components/DataListView';
+import { renderMode } from '../components/utils/renderMode';
+import { useMount } from '../hooks/useMount';
+import { getData } from '../services/getData';
 
 const DataListViewAdapter = (args) => {
 	const [state] = StateManager.useListener(undefined, undefined, {

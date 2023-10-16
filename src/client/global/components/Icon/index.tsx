@@ -2,7 +2,7 @@ import { Icon as MuiIcon, SvgIcon } from '@mui/material';
 import { SnakeCase, getColor } from '../../utils';
 import { customMap } from './custom';
 export const Icon = ({ icon, color, children, ...props }: any) => {
-	const CustomIcon = customMap[icon];
+	const CustomIcon = (customMap as any)[icon];
 
 	if (CustomIcon) {
 		return (

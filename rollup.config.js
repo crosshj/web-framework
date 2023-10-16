@@ -4,8 +4,6 @@ import graphql from '@rollup/plugin-graphql';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-// import replace from '@rollup/plugin-replace';
-//import nodePolyfills from 'rollup-plugin-polyfill-node';
 import externals from 'rollup-plugin-node-externals';
 import css from 'rollup-plugin-import-css';
 
@@ -41,7 +39,6 @@ export default [
 			graphql(),
 			commonjs(),
 			typescript(),
-			//nodePolyfills(),
 		],
 		onwarn(warning, warn) {
 			if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {

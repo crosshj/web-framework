@@ -1,5 +1,5 @@
 import { Button, Card, Typography } from '@mui/material';
-import { Icon } from '../..';
+import { Icon } from '../../Icon';
 import { MobileEmergencyContacts } from './style';
 
 const EmergencyContacts = (props: any) => {

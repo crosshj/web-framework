@@ -8,9 +8,10 @@ import {
 	Toolbar,
 	Typography,
 } from '@mui/material';
-import { Icon, WeekPicker } from '..';
 import { useState } from 'react';
 import { StateManager } from '../../../state/state';
+import { Icon } from '../Icon';
+import { WeekPicker } from '../WeekPicker';
 
 const actionsMap = {
 	readCSV: ['download_rounded', 'Export CSV'],

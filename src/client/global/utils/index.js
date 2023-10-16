@@ -1,3 +1,4 @@
+//DEPRECATE: index code smell
 export * from './actionsList';
 export * from './contextParser';
 export * from './filterByType';
@@ -7,7 +8,6 @@ export * from './getColor.js';
 export * from './getLastIdElement';
 export * from './getNestedValue.js';
 export * from './getNesting';
-export * from './getddmmyyDate';
 export * from './isDeepEqual';
 export * from './nestData';
 export * from './orderContextItems';

@@ -1,7 +1,9 @@
 import { Button as MuiButton } from '@mui/material';
-import { useFlow, useGlobal } from '../../hooks';
-import { Icon } from '..';
+
+import { Icon } from '../Icon';
 import { StateManager } from '../../../state/state';
+import { useFlow } from '../../hooks/useFlow';
+import { useGlobal } from '../../hooks/useGlobal';
 
 export const Button = ({
 	children,

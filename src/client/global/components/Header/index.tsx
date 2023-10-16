@@ -1,10 +1,10 @@
 import { Box, IconButton } from '@mui/material';
 import { ChevronLeft, Menu } from '@mui/icons-material';
 import * as S from './styles';
-
-import { Logo, Profile } from '..';
 import { Link } from '../../../router';
-import { useLayout } from '../../hooks';
+import { useLayout } from '../../hooks/useLayout';
+import { Logo } from '../Logo';
+import { Profile } from '../Profile';
 
 export const Header = ({ menus }: any) => {
 	const { open = false, handleToggleDrawer = null }: any = useLayout() || {};

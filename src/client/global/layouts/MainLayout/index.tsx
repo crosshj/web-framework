@@ -1,12 +1,10 @@
-import React from 'react';
-import * as S from './styles';
-import { Header } from '../../components';
-import { Sidebar } from '../../components/Sidebar';
-
-import { Stack } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { filterMenusByName } from '../../utils';
+import * as S from './styles';
+import { Stack } from '@mui/material';
+import { Header } from '../../components/Header';
+import { Sidebar } from '../../components/Sidebar';
 import ErrorBoundary from '../../components/ErrorBoundary';
+import { filterMenusByName } from '../../utils';
 
 export const MainLayout = ({ menus, children }: any) => {
 	const [headerMenus, setHeaderMenus] = useState([]);

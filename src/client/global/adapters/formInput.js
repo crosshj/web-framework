@@ -1,5 +1,5 @@
 import { StateManager } from '../../state/state';
-import { Input } from '../components';
+import { Input } from '../components/Input';
 import obscureData from '../utils/obscureData';
 
 /*

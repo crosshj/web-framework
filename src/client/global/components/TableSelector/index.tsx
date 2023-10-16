@@ -1,5 +1,5 @@
 import { Stack } from '@mui/material';
-import { ToggleButtonGroup } from '..';
+import { ToggleButtonGroup } from '../ToggleButtonGroup';
 import { StateManager } from '../../../state/state';
 
 export const TableSelector = ({ targetQuery, options, children }: any) => {

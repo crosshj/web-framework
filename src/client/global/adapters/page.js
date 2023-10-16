@@ -1,4 +1,4 @@
-import { Page } from '../components';
+import { Page } from '../components/Page';
 
 export const pageAdapter = ({ type, label, children, props }) => {
 	return {

@@ -1,7 +1,6 @@
-import React from 'react';
 import * as S from './styles';
 import { Stack } from '@mui/material';
-import { Logo } from '../../components';
+import { Logo } from '../../components/Logo';
 
 export const SplashScreen = ({ children, ...props }: any) => {
 	return (

@@ -1,3 +1,4 @@
+//DEPRECATE: index code smell
 export * from './getBarChartData';
 export * from './getContext';
 export * from './getData';

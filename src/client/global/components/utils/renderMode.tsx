@@ -10,7 +10,8 @@ import { Checkbox, Chip, TextField, Typography } from '@mui/material';
 import MUIGeneric from '../_MUI';
 import * as __ from 'lodash';
 import { format } from 'date-fns';
-import { Button, Icon } from '..';
+import { Icon } from '../Icon';
+import { Button } from '../Button';
 
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import { getColor, replaceTokens } from '../../utils';

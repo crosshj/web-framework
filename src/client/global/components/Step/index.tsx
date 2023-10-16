@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { StepButtons } from '..';
+import { StepButtons } from '../StepButtons';
 
 export const Step = ({
 	previousButtonLabel = 'Back',

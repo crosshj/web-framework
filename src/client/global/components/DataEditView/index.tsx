@@ -5,7 +5,7 @@ import {
 	TablePagination,
 } from '@mui/material';
 import { useState } from 'react';
-import { TableToolbar } from '..';
+import { TableToolbar } from '../TableToolbar';
 import { ColumnFilterMenu } from './components/ColumnFilterMenu';
 import { TableBody } from './components/TableBody';
 import { TableHead } from './components/TableHead';
@@ -34,7 +34,7 @@ export const DataEditView = ({
 	const [columnFilterEl, setColumnFilterEl] = useState(null);
 	const isColumnFilterOpen = Boolean(columnFilterEl);
 
-	const handleOpenColumnFilter = (e) => {
+	const handleOpenColumnFilter = (e: any) => {
 		setColumnFilterEl(e.target);
 	};
 	const handleCloseColumnFilter = () => {

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { useTheme, useMediaQuery, SwipeableDrawer } from '@mui/material';
-import { useLayout } from '../../hooks';
+import { useLayout } from '../../hooks/useLayout';
 
 import * as S from './styles';
 import { SidebarContent } from './components/Content/index.jsx';

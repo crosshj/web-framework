@@ -1,11 +1,11 @@
-import { useFlow, useMount } from '../../hooks';
-
 import { Confirm } from './Confirm';
 import { Query } from './Query/index.jsx';
 import { SetData } from './SetData';
 import { Navigate } from './Navigate';
 import { Refresh } from './Refresh';
 import { Insert } from './Insert';
+import { useFlow } from '../../hooks/useFlow';
+import { useMount } from '../../hooks/useMount';
 
 //TODO: possible candidate for refactor
 const getFlowArgsIndex = (flowArgs: any = {}) => {
